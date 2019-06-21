@@ -7,11 +7,6 @@
         <field name="model">doctor.attentions.pediatrics</field>
         <field name="arch" type="xml">
             <form string="Attentions" version="7.0" create="false">
-                <div name="div_mensaje" class="oe_form_box_info oe_text_center" groups="doctor.group_doctor_inactivo,doctor.group_doctor_psicolog_inactivo">
-                    <b> <span class="oe_e">c</span>Apreciado Usuario se han bloqueado las funcionalidades del portal. A la fecha no se ha registrado el pago.</b>
-                </div>
-                <separator/>
-                <separator/>
                 <header>
                     <button string="Finalizar Atención" name="button_closed" states="open" type="object" class="oe_highlight"/>
                     <field name="state" widget="statusbar" statusbar_visible="open,closed"/>
@@ -135,7 +130,7 @@
                                                 </page>
                                             </notebook>
                                             <page string="Antecedentes Patológicos y Farmacológicos">
-                                                <notebook colspan="2" col="4" groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo">
+                                                <notebook colspan="2" col="4" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                                     <page string="Pathological past">
                                                         <field name="pathological_past_ids" nolabel="1" readonly="1" context="{'patient_id' : patient_id}">
                                                             <tree string="Pathological past" editable="top">
@@ -169,7 +164,7 @@
                                                 </notebook>
 
 
-                                                <notebook colspan="4" col="2" groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo">
+                                                <notebook colspan="4" col="2" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                                     <page string="Drugs past">
                                                         <field name="drugs_past_ids" nolabel="1" readonly="1" context="{'patient_id' : patient_id}">
                                                             <tree string="Drugs past" editable="top">
@@ -207,7 +202,7 @@
 
                             </page>
 
-                            <page string="Examen Físico" groups="doctor.group_doctor_physician">
+                            <page string="Examen Físico" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                 <notebook colspan="4" col='4'>
                                     <page string="Vital signs">
                                         <group colspan='4' col='3'>
@@ -280,7 +275,7 @@
                                 </notebook>
                             </page>
 
-                            <page string="Paraclínicos" groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo">
+                            <page string="Paraclínicos" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                 <group colspan="2" col='2' id="group_paraclinical">
                                 </group>
                             </page>
@@ -288,14 +283,14 @@
                             <page string="Dx, Análisis y Conducta">
                                 <group colspan='4' col='4'>
 
-                                        <group colspan="2" col='1' groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo">
+                                        <group colspan="2" col='1' groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                             <label for="analysis" string="Analysis"/>
                                             <field name='analysis' nolabel="1" placeholder="Analysis" />
                                         </group>
 
-                                    <group colspan="2" col='1' groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo" id="group_conduct">
+                                    <group colspan="2" col='1' groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config" id="group_conduct">
                                         <label for="conduct" string="Conduct"/>
-                                        <label for="conduct" string="Conducta(Plan de manejo)" groups="doctor.group_doctor_physician, doctor.group_doctor_psicologo, doctor.group_doctor_assistant, doctor.group_doctor_configuration"/>
+                                        <label for="conduct" string="Conducta(Plan de manejo)" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config"/>
                                         <field name='conduct' nolabel="1" placeholder="Conduct" />
                                     </group>
 
@@ -303,7 +298,7 @@
 
                                 <group colspan='4' col='4'>
 
-                                    <notebook colspan="4" groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo">
+                                    <notebook colspan="4" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                         <page string="Diseases" >
                                             <field name="diseases_ids" colspan="4" nolabel="1">
                                                 <tree string="Diseases" editable="bottom">
@@ -321,7 +316,7 @@
                                             </field>
                                         </page>
                                         <page string="Drugs prescription" >
-                                            <field name="drugs_ids" colspan="4" nolabel="1" groups="doctor.group_doctor_physician">
+                                            <field name="drugs_ids" colspan="4" nolabel="1" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                                 <tree string="Drugs prescription">
                                                     <field name="drugs_id"/>
                                                     <field name="total_quantity"/>
@@ -385,7 +380,7 @@
                                                 </form>
                                             </field>
                                         </page>
-                                        <page string="Diagnostic support" groups="doctor.group_doctor_physician">
+                                        <page string="Diagnostic support" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                             <separator string="Ayudas Diagnósticas" colspan="4"/>
                                             <field name="diagnostic_images_ids" colspan="4" nolabel="1">
                                                 <tree string="Diagnostic images" editable="bottom">
@@ -417,7 +412,7 @@
                                                 </form>
                                             </field>
                                         </page>
-                                        <page string="Procedimientos" groups="doctor.group_doctor_physician">
+                                        <page string="Procedimientos" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                             <separator string="Procedimientos Quirúrgicos" colspan="4"/>
                                             <field name="surgical_procedure_ids" colspan="4" nolabel="1">
                                                 <tree string="Surgical procedure" editable="bottom">
@@ -449,27 +444,7 @@
                                                 </form>
                                             </field>
                                         </page>
-
-                                        <!-- <page string="Therapeutic" groups="doctor.group_doctor_physician">
-                                        </page> -->
-
-                                        <!-- <page string="Other procedures" groups="doctor.group_doctor_physician">
-                                            <field name="other_procedure_ids" colspan="4" nolabel="1">
-                                                <tree string="Other procedures" editable="bottom">
-                                                    <field name="procedures_id" domain="['|',('procedure_type', '=', 1), '|', ('procedure_type', '=', 6), ('procedure_type', '=', 7)]"/>
-                                                    <field name="quantity"/>
-                                                    <field name="indications"/>
-                                                </tree>
-                                                <form string="Other procedures">
-                                                    <group>
-                                                        <field name="procedures_id" domain="['|',('procedure_type', '=', 1), '|', ('procedure_type', '=', 6), ('procedure_type', '=', 7)]"/>
-                                                        <field name="quantity"/>
-                                                        <field name="indications"/>
-                                                    </group>
-                                                </form>
-                                            </field>
-                                        </page> -->
-                                        <page string="Others" groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo">
+                                        <page string="Others" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                             <separator string="Referral and interconsultation" colspan="4"/>
                                             <field name="referral_ids" colspan="4" nolabel="1">
                                                 <tree string="Referral" >
@@ -547,7 +522,7 @@
 <!--    </record>-->
 
     <!-- attentions Menu -->
-    <menuitem name="HC Pediatria" id="doctor_attentions_pediatrics_menuitem" action="action_doctor_attentions_pediatrics" parent="doctor.menu_doctor_process" sequence="40"/>
+    <menuitem name="HC Pediatria" id="doctor_attentions_pediatrics_menuitem" action="action_doctor_attentions_pediatrics" parent="doctor.menu_doctor_process" sequence="40" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config"/>
 
     </data>
 </openerp>
