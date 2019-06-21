@@ -32,6 +32,7 @@
     'website': '',
     'data': [
         'data/appointment_type.sql',
+        'security/doctor_security.xml',
         'security/ir.model.access.csv',
         'views/doctor_attentions_pediatrics_view.xml',
         'views/doctor_patient_pediatrics_inherit_view.xml'

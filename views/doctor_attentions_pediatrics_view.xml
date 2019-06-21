@@ -62,7 +62,7 @@
                         <field name="origin"/>
                     </group>
 
-                    <separator string="Registros Clínicos" colspan="4" groups="doctor.group_doctor_physician,doctor.group_doctor_psicologo"/>
+                    <separator string="Registros Clínicos" colspan="4" />
 
                         <notebook colspan="4" col='4'>
                             <page string="Anamnesis">

@@ -171,7 +171,6 @@ class doctor_appointment(osv.osv):
 					'nodestroy': True,
 				}
 
-		_logger.info("====>>>> fuera de la condición :) ")
 		if self.pool.get('doctor.doctor').modulo_instalado(cr, uid, 'doctor_pediatrics', context=context):
 			
 				_logger.info("====>>>> dentro de la condición :) ")
@@ -193,8 +192,6 @@ class doctor_appointment(osv.osv):
 					'context' : context or None,
 					'nodestroy': True,
 				}
-		else:
-			_logger.info("No está instalado doctor_pediatrics")		
 
 		if tipo_historia == "doctor" or tipo_historia == "l10n_co_doctor":
 			# Get view to show
