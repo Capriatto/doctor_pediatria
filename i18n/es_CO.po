@@ -132,12 +132,14 @@ msgstr "Frec. Cardiaca"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,heart_rate:0
+#: view:doctor.attentions.pediatrics:0
 msgid "Heart Rate"
 msgstr "Frec. Cardiaca"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,respiratory_rate:0
-msgid "Respiratory"
+#: view:doctor.attentions.pediatrics:0
+msgid "Respiratory Rate"
 msgstr "Frec. Respiratoria"
 
 #. module: doctor_pediatrics
@@ -150,3 +152,8 @@ msgstr "Temperatura"
 #: view:doctor.attentions.pediatrics:0
 msgid "Arterial Tension"
 msgstr "Tensión Arterial"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,patient_educational_level:0
+msgid "Educational Level"
+msgstr "Escolaridad"

@@ -178,10 +178,10 @@
                                             <fieldset class="fieldset_margen">
                                             <legend class="texto_legend">Vital signs</legend>
                                                 <group colspan='4' col='3'>
-                                                    <label for="heart_rate" string="Heart rate"/>
+                                                    <label for="heart_rate" string="Heart Rate"/>
                                                     <field name='heart_rate' nolabel='1' style="width:5%%"/>
                                                     <div>L/min</div>
-                                                    <label for="respiratory_rate" string="Respiratory"/>
+                                                    <label for="respiratory_rate" string="Respiratory Rate"/>
                                                     <field name='respiratory_rate' nolabel='1' style="width:5%%"/>
                                                     <div>R/min</div>
                                                 </group>
