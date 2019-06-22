@@ -1,0 +1,152 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* doctor_pediatrics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130608-231017\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-21 22:19+0000\n"
+"PO-Revision-Date: 2019-06-21 22:19+0000\n"
+"Last-Translator: DracoSoft \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,state:0
+msgid "Open"
+msgstr "Abierta"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,state:0
+msgid "Closed"
+msgstr "Cerrada"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,state:0
+msgid "Open"
+msgstr "Abierta"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,age_unit:0
+msgid "Years"
+msgstr "Años"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,age_unit:0
+msgid "Months"
+msgstr "Meses"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,age_unit:0
+msgid "Days"
+msgstr "Días"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,age_unit:0
+msgid "Unit of measure of age"
+msgstr "Unidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,age_attention:0
+msgid "Current age"
+msgstr "Edad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,speciality:0
+msgid "Speciality"
+msgstr "Especialidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,actual_disease:0
+msgid "Actual Disease"
+msgstr "Padecimiento Actual"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,patient_birth_date:0
+msgid "Date of Birth"
+msgstr "Fecha Nacimiento"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,father_name:0
+msgid "Father Name"
+msgstr "Nombre Papá"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,mother_name:0
+msgid "Mother Name"
+msgstr "Nombre mamá"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,father_age:0
+msgid "Father Age"
+msgstr "Edad Papá"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,mother_age:0
+msgid "Mother Age"
+msgstr "Edad mamá"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,patient_sex:0
+msgid "Sex"
+msgstr "Género"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,patient_beliefs:0
+msgid "Beliefs"
+msgstr "Creencias"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,patient_beliefs:0
+msgid "Beliefs"
+msgstr "Creencias"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Patient Details"
+msgstr "Información Paciente"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,patient_id:0
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,analysis:0
+msgid "Analysis"
+msgstr "Comentarios"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Vital signs"
+msgstr "Signos Vitales"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,heart_rate:0
+msgid "Heart rate"
+msgstr "Frec. Cardiaca"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,heart_rate:0
+msgid "Heart Rate"
+msgstr "Frec. Cardiaca"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,respiratory_rate:0
+msgid "Respiratory"
+msgstr "Frec. Respiratoria"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+#: field:doctor.attentions.pediatrics,temperature:0
+msgid "Temperature"
+msgstr "Temperatura"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Arterial Tension"
+msgstr "Tensión Arterial"

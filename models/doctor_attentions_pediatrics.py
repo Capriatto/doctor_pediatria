@@ -18,6 +18,17 @@ class doctor_attentions_pediatrics(osv.Model):
     _rec_name = 'number'
     _order = "date_attention desc"
 
+    #Niveles de estudio
+    educational_level = [
+        ('5', 'JARDIN'),
+        ('6', 'PRIMARIA'),
+        ('7', 'SECUNDARIA'),
+        ('1', 'PREGRADO'),
+        ('2', 'POSGRADO'),
+        ('3', u'MAESTRÍAS'),
+        ('4', u'ESPECIALIZACIÓN'),
+    ]
+
     def create(self, cr, uid, vals, context=None):
         # Set appointment number if empty
         if not vals.get('number'):
@@ -92,7 +103,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'reason_consultation': fields.many2many('doctor.diseases', id1='attention_id', id2='reason_consultation',
                                                 string='Reason for consultation', required=False, ondelete='restrict',
                                                 states={'closed': [('readonly', True)]}),
-        'actual_disease': fields.text('Enfermedad Actual', required=False, states={'closed': [('readonly', True)]}),
+        'actual_disease': fields.text('Actual Disease', required=False, states={'closed': [('readonly', True)]}),
         'review_systems_id': fields.one2many('doctor.review.systems', 'attentiont_id', 'Review of systems',
                                              ondelete='restrict', states={'closed': [('readonly', True)]}),
         'attentions_past_ids': fields.one2many('doctor.attentions.past', 'attentiont_id', 'Past', ondelete='restrict',
@@ -108,17 +119,13 @@ class doctor_attentions_pediatrics(osv.Model):
                                       states={'closed': [('readonly', True)]}),
         'drugs_past_ids': fields.function(_get_drugs_past, relation="doctor.atc.past", type="one2many", store=False,
                                           readonly=True, method=True, string="Old drugs Past"),
-        'weight': fields.float('Weight (kg)', states={'closed': [('readonly', True)]}),
-        'height': fields.float('Height (cm)', states={'closed': [('readonly', True)]}),
         'body_mass_index': fields.float('Body Mass Index', states={'closed': [('readonly', True)]}),
         'heart_rate': fields.integer('Heart Rate', help="Heart rate expressed in beats per minute",
                                      states={'closed': [('readonly', True)]}),
         'respiratory_rate': fields.integer('Respiratory Rate', help="Respiratory rate expressed in breaths per minute",
                                            states={'closed': [('readonly', True)]}),
-        'systolic': fields.integer('Systolic Pressure', states={'closed': [('readonly', True)]}),
-        'diastolic': fields.integer('Diastolic Pressure', states={'closed': [('readonly', True)]}),
         'temperature': fields.float('Temperature (celsius)', states={'closed': [('readonly', True)]}),
-        'pulsioximetry': fields.integer('Oxygen Saturation', help="Oxygen Saturation (arterial).",
+        'arterial_tension': fields.integer('TA', help="Arterial Tension",
                                         states={'closed': [('readonly', True)]}),
         'attentions_exam_ids': fields.one2many('doctor.attentions.exam', 'attentiont_id', 'Exam', ondelete='restrict',
                                                states={'closed': [('readonly', True)]}),
@@ -153,6 +160,59 @@ class doctor_attentions_pediatrics(osv.Model):
                                           ondelete='restrict', states={'closed': [('readonly', True)]}),
         'state': fields.selection([('open', 'Open'), ('closed', 'Closed')], 'Status', readonly=True, required=True),
         'tipo_historia': fields.char('tipo_historia', required=True),
+
+        'patient_sex' : fields.selection([('m', 'Male'), ('f', 'Female'), ], 'Sex', select=True),
+        'patient_educational_level': fields.selection(educational_level, 'Educational Level', required=False),
+        'patient_beliefs' : fields.char('Beliefs'),
+        'patient_birth_date': fields.date('Date of Birth'),
+
+        'father_name' : fields.char('Father Name', size=30),
+        'father_age' : fields.integer('Father Age'),
+        'mother_name' : fields.char('Mother Name', size=30),
+        'mother_age' : fields.integer('Mother Age'),
+
+        #familiar antecedents
+        'antfam_healthy_mother': fields.boolean('Healthy Mother'),
+        'antfam_dead_mother':   fields.boolean('Dead Mother'),
+        'antfam_mother_disease' : fields.char('Mother Disease'),
+
+        'antfam_healthy_father': fields.boolean('Healthy Father'),
+        'antfam_dead_father':   fields.boolean('Dead Father'),
+        'antfam_father_disease' : fields.char('Father Disease'),
+
+        'antfam_sibling_age' : fields.integer('Sibling age'),
+        'antfam_healthy_sibling': fields.boolean('Healthy Sibling'),
+        'antfam_dead_sibling':   fields.boolean('Dead Sibling'),
+        'antfam_sibling_disease' : fields.char('Sibling Disease'),
+
+        'antfam_sibling2_age' : fields.integer('Sibling age'),
+        'antfam_healthy_sibling2': fields.boolean('Healthy Sibling'),
+        'antfam_dead_sibling2':   fields.boolean('Dead Sibling'),
+        'antfam_sibling2_disease' : fields.char('Sibling Disease'),
+
+        'antfam_sibling3_age' : fields.integer('Sibling age'),
+        'antfam_healthy_sibling3': fields.boolean('Healthy Sibling'),
+        'antfam_dead_sibling3':   fields.boolean('Dead Sibling'),
+        'antfam_sibling3_disease' : fields.char('Sibling Disease'),
+
+        'antfam_healthy_maternalgrandma': fields.boolean('Healthy Maternal Grandma'),
+        'antfam_dead_maternalgrandma':   fields.boolean('Dead Maternal Grandma'),
+        'antfam_maternalgrandma_disease' : fields.char('Maternal Grandma Disease'),
+
+        'antfam_healthy_maternalgrandpa': fields.boolean('Healthy Maternal Grandpa'),
+        'antfam_dead_maternalgrandpa':   fields.boolean('Dead Maternal Grandpa'),
+        'antfam_maternalgrandpa_disease' : fields.char('Maternal Grandpa Disease'),
+
+        'antfam_healthy_paternalgrandma': fields.boolean('Healthy Paternal Grandma'),
+        'antfam_dead_paternalgrandma':   fields.boolean('Dead Paternal Grandma'),
+        'antfam_paternalgrandma_disease' : fields.char('Paternal Grandma Disease'),
+
+        'antfam_healthy_other': fields.boolean('Healthy Other'),
+        'antfam_dead_other':   fields.boolean('Dead Other'),
+        'antfam_other_disease' : fields.char('Other Disease'),
+
+        'antfam_smoke' : fields.boolean('Someone smoke at home?'),
+        'antfam_smoke_who': fields.char('Who', size=50),
 
     }
 

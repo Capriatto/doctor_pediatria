@@ -59,19 +59,35 @@
 
                     <separator string="Registros Clínicos" colspan="4" />
 
-                        <notebook colspan="4" col='4'>
+                        <notebook colspan="4" col="4">
+                            <page string="Patient Details">
+                                 <fieldset class="fieldset_margen">
+                                <legend class="texto_legend">Patient Details</legend>
+                                <group col="4">
+                                <field name='patient_birth_date'/>
+                                <field name='patient_sex'/>
+                                <field name='patient_educational_level'/>
+                                <field name='patient_beliefs'/>
+                                <field name='father_name'/>
+                                <field name='father_age'/>
+                                <field name='mother_name'/>
+                                <field name='mother_age'/>
+                                </group>
+                                </fieldset>
+
+                            </page>
                             <page string="Anamnesis">
                                     <notebook colspan="4" col='4'>
-                                        <page string="Motivo de Consulta y Enfermedad Actual">
+                                        <page string="Motivo de Consulta y Padecimiento Actual">
                                             <group colspan="2" col='1'>
                                                 <label for="reason_consultation" string="Reason consultation" invisible="True"/>
                                                 <field name='reason_consultation' nolabel="1" placeholder="Reason consultation" widget="many2many_tags" invisible="True"/>
                                             </group>
 
                                             <group colspan="2" col='1'>
-                                                <label for="actual_disease" string="Actual disease"/>
+                                                <label for="actual_disease"/>
 
-                                                <field name='actual_disease' nolabel="1" placeholder="Actual_disease"/>
+                                                <field name='actual_disease' nolabel="1"/>
 
                                             </group>
                                         </page>
@@ -92,132 +108,73 @@
                                         </page>
 
                                         <page string="Antecedentes">
-                                            <notebook>
-                                                <page string="Past">
-                                                    <field name="past_ids" nolabel="1" readonly="1" context="{'patient_id' : patient_id}">
-                                                        <tree string="Past" editable="top">
-                                                            <field name="attentiont_id" invisible="True" domain="[('attentiont_id', '&lt;', active_id)]"/>
-                                                            <field name="patient_id" invisible="True"/>
-                                                            <field name="past_category"/>
-                                                            <field name="past"/>
-                                                        </tree>
-                                                        <form string="Past">
-                                                            <group>
-                                                                <field name="attentiont_id" invisible="True" domain="[('attentiont_id', '&lt;', active_id)]"/>
-                                                                <field name="patient_id" invisible="True"/>
-                                                                <field name="past_category"/>
-                                                                <field name="past"/>
-                                                            </group>
-                                                        </form>
-                                                    </field>
-                                                </page>
+                                        <fieldset class="fieldset_margen">
+                                            <legend class="texto_legend">Family background</legend>
+                                            <fieldset class="fieldset_margen">
+                                            <legend class="texto_legend">Parents</legend>
+                                                <group colspan='2' col='6'>
+                                                    <field name="antfam_healthy_mother"/>
+                                                    <field name="antfam_dead_mother"/>
+                                                    <field name="antfam_mother_disease"/>
+                                                    <field name="antfam_healthy_father"/>
+                                                    <field name="antfam_dead_father"/>
+                                                    <field name="antfam_father_disease"/>
+                                                </group>
+                                            </fieldset>
+                                            <fieldset class="fieldset_margen">
+                                            <legend class="texto_legend">Siblings</legend>
+                                                <group colspan='2' col='8'>
+                                                    <field name="antfam_sibling_age" style="width:5%%"/>
+                                                    <field name="antfam_healthy_sibling"/>
+                                                    <field name="antfam_dead_sibling"/>
+                                                    <field name="antfam_sibling_disease"/>
 
-                                                <page string="Add Past">
-                                                    <field name="attentions_past_ids" nolabel="1" context="{'patient_id' : patient_id}">
-                                                        <tree string="Add Past" editable="top">
-                                                            <field name="patient_id" invisible="True"/>
-                                                            <field name="past_category"/>
-                                                            <field name="past"/>
-                                                        </tree>
-                                                        <form string="Add Past">
-                                                            <group>
-                                                                <field name="patient_id" invisible="True"/>
-                                                                <field name="past_category"/>
-                                                                <field name="past"/>
-                                                            </group>
-                                                        </form>
-                                                    </field>
-                                                </page>
-                                            </notebook>
-                                            <page string="Antecedentes Patológicos y Farmacológicos">
-                                                <notebook colspan="2" col="4" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                                    <page string="Pathological past">
-                                                        <field name="pathological_past_ids" nolabel="1" readonly="1" context="{'patient_id' : patient_id}">
-                                                            <tree string="Pathological past" editable="top">
-                                                                <field name="attentiont_id" invisible="True" domain="[('attentiont_id', '&lt;', active_id)]"/>
-                                                                <field name="patient_id" invisible="True"/>
-                                                                <field name="diseases_id"/>
-                                                            </tree>
-                                                            <form string="Pathological past">
-                                                                <group>
-                                                                    <field name="attentiont_id" invisible="True" domain="[('attentiont_id', '&lt;', active_id)]"/>
-                                                                    <field name="patient_id" invisible="True"/>
-                                                                    <field name="diseases_id"/>
-                                                                </group>
-                                                            </form>
-                                                        </field>
-                                                    </page>
-                                                    <page string="Add past">
-                                                        <field name="pathological_past" nolabel="1" context="{'patient_id' : patient_id}">
-                                                            <tree string="Add Past" editable="top">
-                                                                <field name="patient_id" invisible="True"/>
-                                                                <field name="diseases_id"/>
-                                                            </tree>
-                                                            <form string="Add Past">
-                                                                <group>
-                                                                    <field name="patient_id" invisible="True"/>
-                                                                    <field name="diseases_id"/>
-                                                                </group>
-                                                            </form>
-                                                        </field>
-                                                    </page>
-                                                </notebook>
+                                                    <field name="antfam_sibling2_age" style="width:5%%"/>
+                                                    <field name="antfam_healthy_sibling2"/>
+                                                    <field name="antfam_dead_sibling2"/>
+                                                    <field name="antfam_sibling2_disease"/>
 
+                                                    <field name="antfam_sibling3_age" style="width:5%%"/>
+                                                    <field name="antfam_healthy_sibling3"/>
+                                                    <field name="antfam_dead_sibling3"/>
+                                                    <field name="antfam_sibling3_disease"/>
 
-                                                <notebook colspan="4" col="2" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                                    <page string="Drugs past">
-                                                        <field name="drugs_past_ids" nolabel="1" readonly="1" context="{'patient_id' : patient_id}">
-                                                            <tree string="Drugs past" editable="top">
-                                                                <field name="attentiont_id" invisible="True" domain="[('attentiont_id', '&lt;', active_id)]"/>
-                                                                <field name="patient_id" invisible="True"/>
-                                                                <field name="atc_id"/>
-                                                            </tree>
-                                                            <form string="Drugs past">
-                                                                <group>
-                                                                    <field name="attentiont_id" invisible="True" domain="[('attentiont_id', '&lt;', active_id)]"/>
-                                                                    <field name="patient_id" invisible="True"/>
-                                                                    <field name="atc_id"/>
-                                                                </group>
-                                                            </form>
-                                                        </field>
-                                                    </page>
-                                                    <page string="Add Past">
-                                                        <field name="drugs_past" nolabel="1" context="{'patient_id' : patient_id}">
-                                                            <tree string="Add Past" editable="top">
-                                                                <field name="patient_id" invisible="True"/>
-                                                                <field name="atc_id"/>
-                                                            </tree>
-                                                            <form string="Add Past">
-                                                                <group>
-                                                                    <field name="patient_id" invisible="True"/>
-                                                                    <field name="atc_id"/>
-                                                                </group>
-                                                            </form>
-                                                        </field>
-                                                    </page>
-                                                </notebook>
-                                            </page>
+                                                </group>
+                                            </fieldset>
+                                            <fieldset class="fieldset_margen">
+                                            <legend class="texto_legend">Grandpa and Grandma</legend>
+                                                <group colspan='2' col='6'>
+                                                    <field name="antfam_healthy_maternalgrandma"/>
+                                                    <field name="antfam_dead_maternalgrandma"/>
+                                                    <field name="antfam_maternalgrandma_disease"/>
+
+                                                    <field name="antfam_healthy_maternalgrandpa"/>
+                                                    <field name="antfam_dead_maternalgrandpa"/>
+                                                    <field name="antfam_maternalgrandpa_disease"/>
+
+                                                    <field name="antfam_healthy_paternalgrandma"/>
+                                                    <field name="antfam_dead_paternalgrandma"/>
+                                                    <field name="antfam_paternalgrandma_disease"/>
+
+                                                    <field name="antfam_healthy_other"/>
+                                                    <field name="antfam_dead_other"/>
+                                                    <field name="antfam_other_disease"/>
+                                                </group>
+                                            </fieldset>
+
+                                            <group col='4'>
+                                                    <field name="antfam_smoke"/>
+                                                    <field name="antfam_smoke_who"/>
+                                            </group>
+                                        </fieldset>
                                         </page>
-                                    </notebook>
-
+                                </notebook>
                             </page>
 
                             <page string="Examen Físico" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                 <notebook colspan="4" col='4'>
                                     <page string="Vital signs">
                                         <group colspan='4' col='3'>
-                                            <fieldset class="fieldset_margen">
-                                            <legend class="texto_legend">Height and weight</legend>
-                                                <group colspan='3' col='3'>
-                                                    <label for="weight" string="Weight"/>
-                                                    <field name='weight' nolabel='1' style="width:5%%"/>
-                                                    <div>kg</div>
-                                                    <label for="height" string="Height"/>
-                                                    <field name='height' nolabel='1' style="width:5%%"/>
-
-                                                    <field name='body_mass_index' nolabel='1' style="width:5%%"/>
-                                                </group>
-                                            </fieldset>
                                             <fieldset class="fieldset_margen">
                                             <legend class="texto_legend">Vital signs</legend>
                                                 <group colspan='4' col='3'>
@@ -230,17 +187,6 @@
                                                 </group>
                                             </fieldset>
                                             <fieldset class="fieldset_margen">
-                                            <legend class="texto_legend">Blood pressure</legend>
-                                                <group colspan='4' col='3'>
-                                                    <label for="systolic" string="Systolic"/>
-                                                    <field name='systolic' nolabel='1' style="width:5%%"/>
-                                                    <div>mmHg</div>
-                                                    <label for="diastolic" string="Diastolic"/>
-                                                    <field name='diastolic' nolabel='1' style="width:5%%"/>
-                                                    <div>mmHg</div>
-                                                </group>
-                                            </fieldset>
-                                            <fieldset class="fieldset_margen">
                                             <legend class="texto_legend">Temperature</legend>
                                                 <group colspan='4' col='3'>
                                                     <label for="temperature" string="Temperature"/>
@@ -249,11 +195,11 @@
                                                 </group>
                                             </fieldset>
                                             <fieldset class="fieldset_margen">
-                                            <legend class="texto_legend">SpO2</legend>
+                                            <legend class="texto_legend">Arterial Tension</legend>
                                                 <group colspan='4' col='3'>
-                                                    <label for="pulsioximetry" string="Pulsioximetry"/>
-                                                    <field name='pulsioximetry' nolabel='1' style="width:5%%"/>
-                                                    <div>%%</div>
+                                                    <label for="arterial_tension" string="TA"/>
+                                                    <field name='arterial_tension' nolabel='1' style="width:5%%"/>
+                                                    <div>mmHg</div>
                                                 </group>
                                             </fieldset>
                                         </group>
@@ -274,18 +220,11 @@
                                     </page>
                                 </notebook>
                             </page>
-
-                            <page string="Paraclínicos" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                <group colspan="2" col='2' id="group_paraclinical">
-                                </group>
-                            </page>
-
                             <page string="Dx, Análisis y Conducta">
                                 <group colspan='4' col='4'>
 
                                         <group colspan="2" col='1' groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                            <label for="analysis" string="Analysis"/>
-                                            <field name='analysis' nolabel="1" placeholder="Analysis" />
+                                            <field name='analysis'/>
                                         </group>
 
                                     <group colspan="2" col='1' groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config" id="group_conduct">
@@ -486,8 +425,8 @@
                 <field name="patient_id"></field>
                 <field name="number"/>
                 <field name="date_attention"></field>
-                <field name="age_attention" string="Age"></field>
-                <field name="age_unit" string="Measure"></field>
+                <field name="age_attention"></field>
+                <field name="age_unit"></field>
                 <field name="professional_id"></field>
                 <field name="speciality"></field>
                 <field name="state"></field>
