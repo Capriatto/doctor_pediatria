@@ -80,13 +80,11 @@
                                     <notebook colspan="4" col='4'>
                                         <page string="Motivo de Consulta y Padecimiento Actual">
                                             <group colspan="2" col='1'>
-                                                <label for="reason_consultation" string="Reason consultation" invisible="True"/>
-                                                <field name='reason_consultation' nolabel="1" placeholder="Reason consultation" widget="many2many_tags" invisible="True"/>
+                                               <label for="reason_consultation"/>
+                                               <field name="reason_consultation" nolabel="1"/>
                                             </group>
-
                                             <group colspan="2" col='1'>
                                                 <label for="actual_disease"/>
-
                                                 <field name='actual_disease' nolabel="1"/>
 
                                             </group>

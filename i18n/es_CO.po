@@ -150,6 +150,13 @@ msgstr "Temperatura"
 
 #. module: doctor_pediatrics
 #: view:doctor.attentions.pediatrics:0
+#: field:doctor.attentions.pediatrics,reason_consultation:0
+msgid "Reason of Consultation"
+msgstr "Motivo de Consulta"
+
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
 msgid "Arterial Tension"
 msgstr "Tensión Arterial"
 

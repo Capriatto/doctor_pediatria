@@ -29,6 +29,7 @@ class doctor_attentions_pediatrics(osv.Model):
         ('4', u'ESPECIALIZACIÓN'),
     ]
 
+
     def create(self, cr, uid, vals, context=None):
         # Set appointment number if empty
         if not vals.get('number'):
@@ -100,11 +101,9 @@ class doctor_attentions_pediatrics(osv.Model):
                                      states={'closed': [('readonly', True)]}),
         'professional_photo': fields.related('professional_id', 'photo', type="binary", relation="doctor.professional",
                                              readonly=True, store=False),
-        'reason_consultation': fields.many2many('doctor.diseases', id1='attention_id', id2='reason_consultation',
-                                                string='Reason for consultation', required=False, ondelete='restrict',
-                                                states={'closed': [('readonly', True)]}),
         'actual_disease': fields.text('Actual Disease', required=False, states={'closed': [('readonly', True)]}),
-        'review_systems_id': fields.one2many('doctor.review.systems', 'attentiont_id', 'Review of systems',
+        'reason_consultation' : fields.char("Reason of Consultation", size=100, required=False, states={'closed': [('readonly', True)]}),
+        'review_systems_id': fields.one2many('doctor.review.systems', 'attentiont_pediatrics_id', 'Review of systems',
                                              ondelete='restrict', states={'closed': [('readonly', True)]}),
         'attentions_past_ids': fields.one2many('doctor.attentions.past', 'attentiont_id', 'Past', ondelete='restrict',
                                                states={'closed': [('readonly', True)]}),
@@ -127,7 +126,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'temperature': fields.float('Temperature (celsius)', states={'closed': [('readonly', True)]}),
         'arterial_tension': fields.integer('TA', help="Arterial Tension",
                                         states={'closed': [('readonly', True)]}),
-        'attentions_exam_ids': fields.one2many('doctor.attentions.exam', 'attentiont_id', 'Exam', ondelete='restrict',
+        'attentions_exam_ids': fields.one2many('doctor.attentions.exam', 'attentiont_pediatrics_id', 'Exam', ondelete='restrict',
                                                states={'closed': [('readonly', True)]}),
         'analysis': fields.text('Analysis', required=False, states={'closed': [('readonly', True)]}),
         'conduct': fields.text('Conduct', required=False, states={'closed': [('readonly', True)]}),
@@ -336,11 +335,30 @@ class doctor_attentions_pediatrics(osv.Model):
         else:
             id_paciente = context.get('patient_id')
 
+        registros_categorias = []
+        registros_examenes_fisicos = []
+        
+        ids = self.pool.get('doctor.systems.category').search(cr,uid,[('active','=',True)],context=context)
+        
+        for i in self.pool.get('doctor.systems.category').browse(cr,uid,ids,context=context):
+            registros_categorias.append((0,0,{'system_category' : i.id,}))
+            #pre-loading systems for the attention
+
+        _logger.info("====> ids = %s" % registros_categorias)
+        
+        ids_examenes_fisicos = self.pool.get('doctor.exam.category').search(cr,uid,[('active','=',True)],context=context)
+        for i in self.pool.get('doctor.exam.category').browse(cr,uid,ids_examenes_fisicos,context=context):
+            registros_examenes_fisicos.append((0,0,{'exam_category' : i.id}))
+        #pre-loading exams for the attention
+       
+
         if id_paciente:
             fecha_nacimiento = self.pool.get('doctor.patient').browse(cr, uid, id_paciente, context=context).birth_date
             res['age_patient_ymd'] = self.calcular_edad_ymd(fecha_nacimiento)
             res['age_attention'] = self.calcular_edad(fecha_nacimiento)
             res['age_unit'] = self.calcular_age_unit(fecha_nacimiento)
+            res['review_systems_id'] = registros_categorias
+            res['attentions_exam_ids'] = registros_examenes_fisicos
 
         return res
 

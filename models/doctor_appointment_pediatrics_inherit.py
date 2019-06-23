@@ -85,7 +85,6 @@ class doctor_appointment(osv.osv):
 		tipo_cita = doctor_appointment_variable.type_id.name
 		profesional_id = doctor_appointment_variable.schedule_id.professional_id.id
 
-		_logger.info("====>>>> vamos a atender %s" % tipo_historia)
 
 		if tipo_historia == "doctor" or tipo_historia == "l10n_co_doctor":
 			attentiont_id = self.create_attentiont(cr, uid, doctor_appointment_variable, context=context)
@@ -173,12 +172,10 @@ class doctor_appointment(osv.osv):
 
 		if self.pool.get('doctor.doctor').modulo_instalado(cr, uid, 'doctor_pediatrics', context=context):
 			
-				_logger.info("====>>>> dentro de la condición :) ")
 				context['default_patient_id'] = context.get('patient_id')
 				context['default_professional_id'] = profesional_id
 				context['tipo_cita_id'] = tipo_cita
 				attentiont_id = self.create_attentiont_pediatrics(cr, uid, doctor_appointment_variable, self.pool.get('doctor.attentions.pediatrics'), context=context)
-				_logger.info("====>>>>attentiont_id %s" % attentiont_id)
 				result = data_obj._get_id(cr, uid, 'doctor_pediatrics', 'view_doctor_attentions_pediatrics_form')
 				view_id = data_obj.browse(cr, uid, result).res_id
 				return {
