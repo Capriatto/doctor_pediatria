@@ -332,7 +332,10 @@ class doctor_attentions_pediatrics(osv.Model):
         'antneuro_' : fields.char('Since When?')
         'antneuro_has_fainted_when' : fields.char('Since When?')
 
-        
+        #functional assessment
+        'functional_special_support' :  fields.boolean('Does your kid need special treatment?'),
+        'functional_what_support' :     fields.selection([('none', 'None'), ('auditive', 'Auditive'), ('motor', 'Motor'), ('visual', 'Visual'), ('language', 'Language'), ], 'What kind of support does he/she need?'),
+        'functional_other_support' :    fields.char('Others')
     }
 
     def name_get(self, cr, uid, ids, context={}):
@@ -492,7 +495,8 @@ class doctor_attentions_pediatrics(osv.Model):
         'antneuro_conduct_school' : 'good',
         'antneuro_school_exploitation' : 'good',
         'antneuro_sight' : 'good',
-        'antneuro_audition' : 'good'
+        'antneuro_audition' : 'good',
+        'functional_what_support' : 'none'
     }
 
 
