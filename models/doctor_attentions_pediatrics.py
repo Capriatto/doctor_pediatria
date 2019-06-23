@@ -336,6 +336,19 @@ class doctor_attentions_pediatrics(osv.Model):
         'functional_special_support' :  fields.boolean('Does your kid need special treatment?'),
         'functional_what_support' :     fields.selection([('none', 'None'), ('auditive', 'Auditive'), ('motor', 'Motor'), ('visual', 'Visual'), ('language', 'Language'), ], 'What kind of support does he/she need?'),
         'functional_other_support' :    fields.char('Others')
+
+        #nutritional background
+        'antnutri_weight' : fields.float('Weight'),
+        'antnutri_size' : fields.float('Size'),
+        'antnutri_percentile' : fields.integer('Percentile'),
+        'antnutri_bmi' : fields.float('Body mass index'), #body mass index (IMC in spanish)
+        'antnutri_solid_food' : fields.char('Start solid food (age)'),
+        'antnutri_food_type'  :  fields.char('Type of family meal (vegetarian, mixed, kosher)'),
+        'antnutri_food_quality' : fields.char('Food quality'),
+        'antnutri_food_quantity' : fields.char('Food quantity'),
+        'antnutri_special_diet'  : fields.boolean('Special Diet'),
+        'antnutri_special_diet_which' : fields.char('Which?')
+
     }
 
     def name_get(self, cr, uid, ids, context={}):
