@@ -166,6 +166,78 @@
                                             </group>
                                         </fieldset>
                                         </page>
+                                        
+                                        <page string="Perinatal background">
+                                            <fieldset class="fieldset_margen">
+                                            <legend class="texto_legend">Perinatal background</legend>
+                                            <group>
+                                                <field name="antperin_pregnancy_number"/>
+                                                <field name="antperin_multiple_pregnancy"/>
+                                                <field name="antperin_used_medications"/>
+                                                <field name="antperin_which_medications"/>
+                                                <field name="antperin_used_vitamins"/>
+                                                <field name="antperin_which_vitamins"/>
+                                                <field name="antperin_weeks_pregnancy"/>
+                                                <field name="antperin_used_drugs_smoke"/>
+                                                <field name="antperin_normal_birth"/>
+                                                <field name="antperin_normal_birth_why"/>
+                                                <field name="antperin_birth_weight"/>
+                                                <field name="antperin_birth_size"/>
+                                                <field name="antperin_metabolic_sieve"/>
+                                                <field name="antperin_metabolic_sieve_ratings"/>
+                                                <field name="antperin_auditive_sieve"/>
+                                                <field name="antperin_complications"/>
+                                                <field name="antperin_complications_which"/>
+                                                <field name="antperin_drank_mothers_breast"/>
+                                                <field name="antperin_drank_mothers_breast_long"/>
+                                                <field name="antperin_take_formula"/>
+                                                <field name="antperin_take_formula_which"/>
+                                            </group>
+                                            </fieldset>
+                                        </page>
+                                        <page string="Immunization">
+                                        <fieldset class="fieldset_margen">
+                                        <legend class="texto_legend">Immunization</legend>
+                                        <group>
+                                            <field name="antimm_tuberculosis"/>
+                                            <field name="antimm_polio"/>
+                                            <field name="antimm_polio_quantity"/>
+                                            <field name="antimm_pentavalent"/>
+                                            <field name="antimm_pentavalent_quantity"/>
+                                            <field name="antimm_triple_viral"/>
+                                            <field name="antimm_triple_viral_quantity"/>
+                                            <field name="antimm_triple_viral"/>
+                                            <field name="antimm_varicella"/>
+                                            <field name="antimm_varicella_date"/>
+                                            <field name="antimm_pneumococcus"/>
+                                            <field name="antimm_pneumococcus_date"/>
+                                            <field name="antimm_hepatitis_a"/>
+                                            <field name="antimm_hepatitis_date"/>
+                                            <field name="antimm_influenza"/>
+                                            <field name="antimm_influenza_date"/>
+                                            <field name="antimm_rotavirus"/>
+                                            <field name="antimm_rotavirus_date"/>
+                                            <field name="antimm_other"/>
+                                            <field name="antimm_other_date"/>
+                                        </group>
+                                        </fieldset>
+                                        </page>
+
+                                        <page string="Psychomotor development">
+                                        <fieldset class="fieldset_margen">
+                                        <legend class="texto_legend">Psychomotor development</legend>
+                                            <group>
+                                            <field name="antpsicho_held_head"/>
+                                            <field name="antpsycho_smile"/>
+                                            <field name="antpsycho_babbling"/>
+                                            <field name="antpsycho_sit"/>
+                                            <field name="antpsycho_crawl"/>
+                                            <field name="antpsycho_supported_walk"/>
+                                            <field name="antpsycho_walk"/>
+                                            <field name="antpsycho_school"/>
+                                            </group>
+                                        </fieldset>
+                                        </page>         
                                 </notebook>
                             </page>
 
