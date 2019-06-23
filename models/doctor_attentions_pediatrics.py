@@ -308,6 +308,31 @@ class doctor_attentions_pediatrics(osv.Model):
         'antsurgical_hospitalizations'  : fields.char('Previous Hospitalizations'),
         'antsurgical_surgeries' : fields.char('Surgeries'),
         'antsurgical_others'    : fields.char('Others'),
+
+        #Neuropsychological background
+        'antneuro_conduct_home' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'Conduct at Home'),
+        'antneuro_conduct_home_when' : fields.char('Since When?')
+        'antneuro_conduct_school' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'Conduct at School'),
+        'antneuro_conduct_school_when' : fields.char('Since When?')
+        'antneuro_school_exploitation' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'School Exploitation'),
+        'antneuro_school_exploitation_when' : fields.char('Since When?')
+        'antneuro_sight' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'How does he/she see?'),
+        'antneuro_sight_when' : fields.char('Since When?')
+        'antneuro_audition' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'How does he/she hear?'),
+        'antneuro_audition_when' : fields.char('Since When?')
+        'antneuro_loses_balance' : fields.boolean('Loses the balance easily'),
+        'antneuro_loses_balance_when' : fields.char('Since When?')
+        'antneuro_difficulty_speaking' : fields.boolean('Difficulty Speaking'),
+        'antneuro_difficulty_speaking_when' : fields.char('Since When?')
+        'antneuro_difficulty_sleep' : fields.boolean('Difficulty getting to sleep'),
+        'antneuro_difficulty_sleep_when' : fields.char('Since When?')
+        'antneuro_wakeup_night' : fields.boolean('Does he/she wake up during the night'),
+        'antneuro_wakeup_night_when' : fields.char('Since When?')
+        'antneuro_has_fainted' :  fields.boolean('Has he/she ever fainted'),
+        'antneuro_' : fields.char('Since When?')
+        'antneuro_has_fainted_when' : fields.char('Since When?')
+
+        
     }
 
     def name_get(self, cr, uid, ids, context={}):
@@ -462,7 +487,12 @@ class doctor_attentions_pediatrics(osv.Model):
         'date_attention': lambda *a: datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S"),
         'professional_id': _get_professional_id if _get_professional_id != False else False,
         'state': 'open',
-        'tipo_historia': 'hc_pediatrics'
+        'tipo_historia': 'hc_pediatrics',
+        'antneuro_conduct_home' : 'good',
+        'antneuro_conduct_school' : 'good',
+        'antneuro_school_exploitation' : 'good',
+        'antneuro_sight' : 'good',
+        'antneuro_audition' : 'good'
     }
 
 
