@@ -170,7 +170,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'mother_name' : fields.char('Mother Name', size=30),
         'mother_age' : fields.integer('Mother Age'),
 
-        #familiar antecedents
+        #family background
         'antfam_healthy_mother': fields.boolean('Healthy Mother'),
         'antfam_dead_mother':   fields.boolean('Dead Mother'),
         'antfam_mother_disease' : fields.char('Mother Disease'),
@@ -212,6 +212,29 @@ class doctor_attentions_pediatrics(osv.Model):
 
         'antfam_smoke' : fields.boolean('Someone smoke at home?'),
         'antfam_smoke_who': fields.char('Who', size=50),
+
+        # Perinatal Background
+        'antperin_pregnancy_number' : fields.char('Pregnancy Number'),
+        'antperin_multiple_pregnancy': fields.boolean('Multiple Pregnancy (Twins or triplets)?'),
+        'antperin_used_medications' :  fields.boolean('Did you use medications?'),
+        'antperin_which_medications' : fields.char('Wich medications?'),
+        'antperin_used_vitamins' :  fields.boolean('Did you use vitamins?'),
+        'antperin_which_vitamins' : fields.char('Which vitamins?'),
+        'antperin_weeks_pregnancy' : fields.integer('Weeks of Pregnancy', size=2),
+        'antperin_used_drugs_smoke' :  fields.boolean('Did you use Drugs or Smoke?'),
+        'antperin_normal_birth' : fields.boolean('It was a normal birth?'),
+        'antperin_normal_birth_why' : fields.char('Why?'),
+        'antperin_birth_weight' : fields.float('Birth Weight?', help="Weight in grams of the baby at birth."),
+        'antperin_birth_size' : fields.float('Birth Size?', help="Size in centimeters of the baby at birth."),
+        'antperin_metabolic_sieve' : fields.char('Metabolic Sieve'),
+        'antperin_metabolic_sieve_ratings' : fields.char('Metabolic Sieve Rating'),
+        'antperin_complications' : fields.boolean('Any complications?'),
+        'antperin_complications_which' : fields.boolean('Which?'),
+        'antperin_drank_mothers_breast' : fields.boolean("Drank mother's breast?"),
+        'antperin_drank_mothers_breast_long' : fields.char('How long?'),
+        'antperin_take_formula' : fields.boolean("Did take formula?"),
+        'antperin_take_formula_which' : fields.char('Which?'),
+
 
     }
 

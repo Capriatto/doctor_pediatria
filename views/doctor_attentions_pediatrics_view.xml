@@ -105,7 +105,7 @@
                                             </field>
                                         </page>
 
-                                        <page string="Antecedentes">
+                                        <page string="Family background">
                                         <fieldset class="fieldset_margen">
                                             <legend class="texto_legend">Family background</legend>
                                             <fieldset class="fieldset_margen">
