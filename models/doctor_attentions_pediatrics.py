@@ -266,7 +266,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'antpsycho_crawl'   : fields.char('Did he/she crawl?'), 
         'antpsycho_supported_walk' : fields.char('Did he/she walk with help?'),
         'antpsycho_walk'    : fields.char('Did he/she walk without help?'),
-        'antpsycho_school'  : fields.char('How is he/she going in the school?')
+        'antpsycho_school'  : fields.char('How is he/she going in the school?'),
 
         #Surgical background
         'antsurgical_reflux' : fields.boolean('Reflux'),
@@ -311,31 +311,30 @@ class doctor_attentions_pediatrics(osv.Model):
 
         #Neuropsychological background
         'antneuro_conduct_home' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'Conduct at Home'),
-        'antneuro_conduct_home_when' : fields.char('Since When?')
+        'antneuro_conduct_home_when' : fields.char('Since When?'),
         'antneuro_conduct_school' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'Conduct at School'),
-        'antneuro_conduct_school_when' : fields.char('Since When?')
+        'antneuro_conduct_school_when' : fields.char('Since When?'),
         'antneuro_school_exploitation' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'School Exploitation'),
-        'antneuro_school_exploitation_when' : fields.char('Since When?')
+        'antneuro_school_exploitation_when' : fields.char('Since When?'),
         'antneuro_sight' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'How does he/she see?'),
-        'antneuro_sight_when' : fields.char('Since When?')
+        'antneuro_sight_when' : fields.char('Since When?'),
         'antneuro_audition' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'How does he/she hear?'),
-        'antneuro_audition_when' : fields.char('Since When?')
+        'antneuro_audition_when' : fields.char('Since When?'),
         'antneuro_loses_balance' : fields.boolean('Loses the balance easily'),
-        'antneuro_loses_balance_when' : fields.char('Since When?')
+        'antneuro_loses_balance_when' : fields.char('Since When?'),
         'antneuro_difficulty_speaking' : fields.boolean('Difficulty Speaking'),
-        'antneuro_difficulty_speaking_when' : fields.char('Since When?')
+        'antneuro_difficulty_speaking_when' : fields.char('Since When?'),
         'antneuro_difficulty_sleep' : fields.boolean('Difficulty getting to sleep'),
-        'antneuro_difficulty_sleep_when' : fields.char('Since When?')
+        'antneuro_difficulty_sleep_when' : fields.char('Since When?'),
         'antneuro_wakeup_night' : fields.boolean('Does he/she wake up during the night'),
-        'antneuro_wakeup_night_when' : fields.char('Since When?')
+        'antneuro_wakeup_night_when' : fields.char('Since When?'),
         'antneuro_has_fainted' :  fields.boolean('Has he/she ever fainted'),
-        'antneuro_' : fields.char('Since When?')
-        'antneuro_has_fainted_when' : fields.char('Since When?')
+        'antneuro_has_fainted_when' : fields.char('Since When?'),
 
         #functional assessment
         'functional_special_support' :  fields.boolean('Does your kid need special treatment?'),
         'functional_what_support' :     fields.selection([('none', 'None'), ('auditive', 'Auditive'), ('motor', 'Motor'), ('visual', 'Visual'), ('language', 'Language'), ], 'What kind of support does he/she need?'),
-        'functional_other_support' :    fields.char('Others')
+        'functional_other_support' :    fields.char('Others'),
 
         #nutritional background
         'antnutri_weight' : fields.float('Weight'),
@@ -348,6 +347,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'antnutri_food_quantity' : fields.char('Food quantity'),
         'antnutri_special_diet'  : fields.boolean('Special Diet'),
         'antnutri_special_diet_which' : fields.char('Which?')
+
 
     }
 

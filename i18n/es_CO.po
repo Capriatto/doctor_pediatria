@@ -118,7 +118,7 @@ msgstr "Exámen Físico"
 #. module: doctor
 #: view:doctor.attentions.pediatrics:0
 msgid "Family background"
-msgstr "Antecedentes Familiares"
+msgstr "Antec. Familiares"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,patient_id:0
