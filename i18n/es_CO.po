@@ -607,3 +607,53 @@ msgstr "Otro"
 msgid "Specify"
 msgstr "Especifique"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsicho_held_head:0
+msgid "Did he/she hold the head?"
+msgstr "Sostuvo la cabeza"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_smile:0
+msgid "Did he/she smile?"
+msgstr "Sonrió"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_babbling:0
+msgid "Did he/she babble?
+msgstr "Balbuceó"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_sit:0
+msgid "Did he/she sit?
+msgstr "Sentó"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_crawl:0
+msgid "Did he/she crawl?
+msgstr "Gateó"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_supported_walk:0
+msgid "Did he/she walk with help?
+msgstr "Caminó con ayuda"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_walk:0
+msgid "Did he/she walk without help?
+msgstr "Caminó solo(a)"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antpsycho_school:0
+msgid "How is he/she going in the school?"
+msgstr "¿Cómo va en la escuela?"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Respond to what age he or she managed to do it"
+msgstr "Por favor responda a qué edad logró realizarlo"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Specify the number of doses that have been applied"
+msgstr "Especifique el número de dosis que han sido aplicadas"
+

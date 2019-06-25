@@ -203,7 +203,7 @@
                                         </page>
                                         <page string="Immunization">
                                         <fieldset class="fieldset_margen">
-                                        <legend class="texto_legend">Immunization</legend>
+                                        <legend class="texto_legend">Specify the number of doses that have been applied</legend>
                                         <group col="4">
                                             <field name="antimm_tuberculosis"/>
                                             <field name="antimm_triple_viral"/>
@@ -231,7 +231,7 @@
 
                                         <page string="Psychomotor development">
                                         <fieldset class="fieldset_margen">
-                                        <legend class="texto_legend">Psychomotor development</legend>
+                                        <legend class="texto_legend">Respond to what age he or she managed to do it</legend>
                                             <group>
                                             <field name="antpsicho_held_head"/>
                                             <field name="antpsycho_smile"/>
