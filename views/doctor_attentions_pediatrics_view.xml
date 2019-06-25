@@ -400,8 +400,8 @@
                                          <fieldset class="fieldset_margen">
                                           <legend class="texto_legend">Functional assessment</legend>
                                           <group>
-                                            <field name="functional_special_support"/>
-                                            <field name="functional_what_support" attrs="{'invisible':[('functional_special_support','=', False)]}"/>
+                                            <field name="functional_special_support" on_change="onchange_kindsupport(functional_special_support)"/>
+                                            <field name="functional_what_support" attrs="{'invisible':[('functional_special_support','=', False)]}" />
                                             <field name="functional_other_support"/>
                                         </group>
                                         </fieldset>

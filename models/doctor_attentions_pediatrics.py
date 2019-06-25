@@ -337,7 +337,7 @@ class doctor_attentions_pediatrics(osv.Model):
 
         #functional assessment
         'functional_special_support' :  fields.boolean('Does your kid need special treatment?'),
-        'functional_what_support' :     fields.selection([('none', 'None'), ('auditive', 'Auditive'), ('motor', 'Motor'), ('visual', 'Visual'), ('language', 'Language'), ], 'What kind of support does he/she need?'),
+        'functional_what_support' :     fields.selection([('auditive', 'Auditive'), ('motor', 'Motor'), ('visual', 'Visual'), ('language', 'Language'), ], 'What kind of support does he/she need?'),
         'functional_other_support' :    fields.text('Others'),
 
         #nutritional background
@@ -393,6 +393,12 @@ class doctor_attentions_pediatrics(osv.Model):
         except:
             _logger.info("There's an error in the body mass index calculation")
         res['value']['antnutri_bmi'] = imc
+        return res
+
+    def onchange_kindsupport(self, cr, uid, ids, support, context=None):
+        res = {'value':{}}
+        if support == False:
+            res['value']['functional_what_support'] = ''
         return res
 
     def onchange_patient(self, cr, uid, ids, patient_id, context=None):
@@ -527,7 +533,6 @@ class doctor_attentions_pediatrics(osv.Model):
         'antneuro_school_exploitation' : 'good',
         'antneuro_sight' : 'good',
         'antneuro_audition' : 'good',
-        'functional_what_support' : 'none',
         'antperin_normal_birth' : True
     }
 

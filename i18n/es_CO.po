@@ -1077,4 +1077,40 @@ msgstr "Dieta especial"
 msgid "Which?"
 msgstr "¿Cuál?"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,functional_special_support:0
+msgid "Does your kid need special treatment?"
+msgstr "Tiene su niño(a) una capacidad diferente que requiera apoyo especial?"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,functional_what_support:0
+msgid "Auditive"
+msgstr "Auditivo"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,functional_what_support:0
+msgid "Motor"
+msgstr "Motor"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,functional_what_support:0
+msgid "Visual"
+msgstr "Visual"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,functional_what_support:0
+msgid "Language"
+msgstr "Idioma"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,functional_what_support:0
+msgid "What kind of support does he/she need?"
+msgstr "¿Qué tipo de apoyo requiere?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,functional_other_support:0
+msgid "Others"
+msgstr "Otros"
+
+
 
