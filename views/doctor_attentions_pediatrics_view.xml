@@ -174,7 +174,7 @@
                                         <page string="Perinatal background">
                                             <fieldset class="fieldset_margen">
                                             <legend class="texto_legend">Perinatal background</legend>
-                                            <group>
+                                            <group col="4">
                                                 <field name="antperin_pregnancy_number"/>
                                                 <field name="antperin_multiple_pregnancy"/>
                                                 <field name="antperin_used_medications"/>
@@ -190,7 +190,9 @@
                                                 <field name="antperin_metabolic_sieve"/>
                                                 <field name="antperin_metabolic_sieve_ratings"/>
                                                 <field name="antperin_auditive_sieve"/>
-                                                <field name="antperin_complications"/>
+                                            </group>
+                                            <group col="4">
+                                                 <field name="antperin_complications"/>
                                                 <field name="antperin_complications_which"/>
                                                 <field name="antperin_drank_mothers_breast"/>
                                                 <field name="antperin_drank_mothers_breast_long"/>
@@ -202,15 +204,15 @@
                                         <page string="Immunization">
                                         <fieldset class="fieldset_margen">
                                         <legend class="texto_legend">Immunization</legend>
-                                        <group>
+                                        <group col="4">
                                             <field name="antimm_tuberculosis"/>
+                                            <field name="antimm_triple_viral"/>
                                             <field name="antimm_polio"/>
                                             <field name="antimm_polio_quantity"/>
-                                            <field name="antimm_pentavalent"/>
+                                             <field name="antimm_pentavalent"/>
                                             <field name="antimm_pentavalent_quantity"/>
-                                            <field name="antimm_triple_viral"/>
+                                             <field name="antimm_triple_viral"/>
                                             <field name="antimm_triple_viral_quantity"/>
-                                            <field name="antimm_triple_viral"/>
                                             <field name="antimm_varicella"/>
                                             <field name="antimm_varicella_date"/>
                                             <field name="antimm_pneumococcus"/>
@@ -320,7 +322,7 @@
                                           <legend class="texto_legend">Nutritional Background</legend>
                                           <group col="4">
                                             <field name="antnutri_weight"/>
-                                            <field name="antnutri_size"/>
+                                            <field name="antnutri_size" on_change="onchange_bmi_calculation(antnutri_weight, antnutri_size)"/>
                                             <field name="antnutri_percentile"/>
                                             <field name="antnutri_bmi"/>
                                             <field name="antnutri_solid_food"/>

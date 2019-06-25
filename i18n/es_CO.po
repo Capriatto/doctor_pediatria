@@ -400,10 +400,111 @@ msgstr "Alguien fuma en casa?"
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,antfam_smoke_who:0
 msgid "Who"
-msgstr "Quién?"
+msgstr "¿Quién?"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_auditive_sieve:0
+msgid "Auditive Sieve"
+msgstr "Tamiz auditivo"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_metabolic_sieve:0
+msgid "Metabolic Sieve"
+msgstr "Tamiz metabólico"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_metabolic_sieve_ratings:0
+msgid "Metabolic Sieve Rating"
+msgstr "¿Qué calificación le dieron?"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_complications:0
+msgid "Any complications?"
+msgstr "¿Tuvo alguna complicación?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_complications_which:0
+msgid "Which?"
+msgstr "¿Cuál?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_drank_mothers_breast:0
+msgid "Drank mother's breast?"
+msgstr "¿Tomó seno materno?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_drank_mothers_breast_long:0
+msgid "How long?"
+msgstr "¿Cuánto tiempo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_take_formula:0
+msgid "Did take formula??"
+msgstr "¿Tomó fórmula?"	
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_take_formula_which:0
+msgid "Which?"
+msgstr "¿Cuál?"	
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_pregnancy_number:0
+msgid "Pregnancy Number"
+msgstr "Número de embarazo"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_multiple_pregnancy:0
+msgid "Multiple Pregnancy (Twins or triplets)?"
+msgstr "Embarazo múltiple (gemelos o triates)"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_used_medications:0
+msgid "Did you use medications?"
+msgstr "¿Tomó medicamentos?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_which_medications:0
+msgid "Wich medications?"
+msgstr "¿Cuáles?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_normal_birth:0
+msgid "It was a normal birth?"
+msgstr "¿Fue parto normal?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_normal_birth_why:0
+msgid "Why?"
+msgstr "¿Por qué?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_birth_weight:0
+msgid "Birth Weight?"
+msgstr "¿Cuánto Pesó?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_birth_size:0
+msgid "Birth Size?"
+msgstr "¿Cuánto midió?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_weeks_pregnancy:0
+msgid "Weeks of Pregnancy"
+msgstr "¿Cuántas semanas tuvo de embarazo?"
+
+#. module: doctor_pediatrics	
+#: field:doctor.attentions.pediatrics,antperin_used_drugs_smoke:0
+msgid "Did you use Drugs or Smoke?"
+msgstr "¿Fumó algo o tomó alguna droga?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_which_vitamins:0
+msgid "Which vitamins?"
+msgstr "¿Cuáles?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_used_vitamins:0
+msgid "Did you use vitamins?"
+msgstr "¿Tomó vitaminas?"
 
 

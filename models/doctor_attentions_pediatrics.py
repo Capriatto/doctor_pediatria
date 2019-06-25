@@ -234,7 +234,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'antperin_metabolic_sieve_ratings' : fields.char('Metabolic Sieve Rating'),
         'antperin_auditive_sieve' : fields.char('Auditive Sieve'),
         'antperin_complications' : fields.boolean('Any complications?'),
-        'antperin_complications_which' : fields.boolean('Which?'),
+        'antperin_complications_which' : fields.char('Which?'),
         'antperin_drank_mothers_breast' : fields.boolean("Drank mother's breast?"),
         'antperin_drank_mothers_breast_long' : fields.char('How long?'),
         'antperin_take_formula' : fields.boolean("Did take formula?"),
@@ -259,7 +259,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'antimm_influenza_date' : fields.date('Date'),
         'antimm_rotavirus' : fields.boolean("Rotavirus"),
         'antimm_rotavirus_date' : fields.date('Date'),
-        'antimm_other' : fields.boolean("Other"),
+        'antimm_other' : fields.char("Other"),
         'antimm_other_date' : fields.date('Date'),
  
         #psychomotor development
@@ -380,6 +380,20 @@ class doctor_attentions_pediatrics(osv.Model):
         })
         _logger.info(values)
         return {'value': values}
+
+    def onchange_bmi_calculation(self, cr, uid, ids, weight, size, context=None):
+        res = {'value':{}}
+        imc = 0
+        corporal_surface=0
+
+        if not weight or not size:
+            imc = 0.00 
+        try:
+            imc = (weight / (( size / 100.0  ) ** 2 ))   
+        except:
+            _logger.info("There's an error in the body mass index calculation")
+        res['value']['antnutri_bmi'] = imc
+        return res
 
     def onchange_patient(self, cr, uid, ids, patient_id, context=None):
         values = {}
@@ -513,7 +527,8 @@ class doctor_attentions_pediatrics(osv.Model):
         'antneuro_school_exploitation' : 'good',
         'antneuro_sight' : 'good',
         'antneuro_audition' : 'good',
-        'functional_what_support' : 'none'
+        'functional_what_support' : 'none',
+        'antperin_normal_birth' : True
     }
 
 
