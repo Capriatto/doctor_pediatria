@@ -206,12 +206,16 @@ class doctor_attentions_pediatrics(osv.Model):
         'antfam_dead_paternalgrandma':   fields.boolean('Dead Paternal Grandma'),
         'antfam_paternalgrandma_disease' : fields.char('Paternal Grandma Disease'),
 
+        'antfam_healthy_paternalgrandpa': fields.boolean('Healthy Paternal Grandpa'),
+        'antfam_dead_paternalgrandpa':   fields.boolean('Dead Paternal Grandpa'),
+        'antfam_paternalgrandpa_disease' : fields.char('Paternal Grandpa Disease'),
+
         'antfam_healthy_other': fields.boolean('Healthy Other'),
         'antfam_dead_other':   fields.boolean('Dead Other'),
         'antfam_other_disease' : fields.char('Other Disease'),
 
         'antfam_smoke' : fields.boolean('Someone smoke at home?'),
-        'antfam_smoke_who': fields.char('Who', size=50),
+        'antfam_smoke_who': fields.char('Who?', size=50),
 
         # Perinatal Background
         'antperin_pregnancy_number' : fields.char('Pregnancy Number'),

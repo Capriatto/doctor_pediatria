@@ -120,6 +120,42 @@ msgstr "Exámen Físico"
 msgid "Family background"
 msgstr "Antec. Familiares"
 
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Perinatal background"
+msgstr "Antec. Perinatales"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Immunization"
+msgstr "Inmunización"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Psychomotor development"
+msgstr "Desarrollo Psicomotor"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Surgical background"
+msgstr "Antec. Médico/Quirúrgicos"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Neuropsychological background"
+msgstr "Antec. Neuropsicológicos"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Functional assessment"
+msgstr "Evaluación Funcional"
+
+#. module: doctor
+#: view:doctor.attentions.pediatrics:0
+msgid "Nutritional Background"
+msgstr "Antec. Nutricionales"
+
+
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,patient_id:0
 msgid "Patient"
@@ -134,6 +170,17 @@ msgstr "Comentarios"
 #: view:doctor.attentions.pediatrics:0
 msgid "Vital signs"
 msgstr "Signos Vitales"
+
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Exam"
+msgstr "Exámen Físico"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Siblings"
+msgstr "Hermanos"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,heart_rate:0
@@ -174,3 +221,189 @@ msgstr "Tensión Arterial"
 #: field:doctor.attentions.pediatrics,patient_educational_level:0
 msgid "Educational Level"
 msgstr "Escolaridad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_mother:0
+msgid "Healthy Mother"
+msgstr "Mamá sana"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_mother:0
+msgid "Dead Mother"
+msgstr "Finada"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_mother_disease:0
+msgid "Mother Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_father:0
+msgid "Healthy Father"
+msgstr "Papá sano"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_father_disease:0
+msgid "Father Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_father:0
+msgid "Dead Father"
+msgstr "Finado"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_sibling_age:0
+msgid "Sibling age"
+msgstr "Hermano/a Edad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_sibling:0
+msgid "Healthy Sibling"
+msgstr "Sano/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_sibling:0
+msgid "Dead Sibling"
+msgstr "Finado/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_sibling_disease:0
+msgid "Sibling Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_sibling2_age:0
+msgid "Sibling age"
+msgstr "Hermano/a Edad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_sibling2:0
+msgid "Healthy Sibling"
+msgstr "Sano/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_sibling2:0
+msgid "Dead Sibling"
+msgstr "Finado/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_sibling2_disease:0
+msgid "Sibling Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_sibling3_age:0
+msgid "Sibling age"
+msgstr "Hermano/a Edad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_sibling3:0
+msgid "Healthy Sibling"
+msgstr "Sano/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_sibling3:0
+msgid "Dead Sibling"
+msgstr "Finado/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_sibling3_disease:0
+msgid "Sibling Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Grandpa and Grandma"
+msgstr "Abuelo y Abuela"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_maternalgrandma:0
+msgid "Healthy Maternal Grandma"
+msgstr "Abuela Materna sana"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_maternalgrandma:0
+msgid "Dead Maternal Grandma"
+msgstr "Finada"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_maternalgrandma_disease:0
+msgid "Maternal Grandma Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_maternalgrandpa:0
+msgid "Healthy Maternal Grandpa"
+msgstr "Abuelo Materno sano"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_maternalgrandpa:0
+msgid "Dead Maternal Grandpa"
+msgstr "Finado"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_maternalgrandpa_disease:0
+msgid "Maternal Grandpa Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_paternalgrandma:0
+msgid "Healthy Paternal Grandma"
+msgstr "Abuela Paterna sana"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_paternalgrandma:0
+msgid "Dead Paternal Grandma"
+msgstr "Finada"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_paternalgrandma_disease:0
+msgid "Paternal Grandma Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_paternalgrandpa:0
+msgid "Healthy Paternal Grandpa"
+msgstr "Abuelo Paterno sano"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_paternalgrandpa:0
+msgid "Dead Paternal Grandpa"
+msgstr "Finado"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_paternalgrandpa_disease:0
+msgid "Paternal Grandpa Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_healthy_other:0
+msgid "Healthy Other"
+msgstr "Otro sano"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_dead_other:0
+msgid "Dead Other"
+msgstr "Finado/a"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_other_disease:0
+msgid "Other Disease"
+msgstr "Enfermedad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_smoke:0
+msgid "Someone smoke at home?"
+msgstr "Alguien fuma en casa?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antfam_smoke_who:0
+msgid "Who"
+msgstr "Quién?"
+
+
+
+
+
+

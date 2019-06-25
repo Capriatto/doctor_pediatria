@@ -154,6 +154,10 @@
                                                     <field name="antfam_dead_paternalgrandma"/>
                                                     <field name="antfam_paternalgrandma_disease"/>
 
+                                                    <field name="antfam_healthy_paternalgrandpa"/>
+                                                    <field name="antfam_dead_paternalgrandpa"/>
+                                                    <field name="antfam_paternalgrandpa_disease"/>
+
                                                     <field name="antfam_healthy_other"/>
                                                     <field name="antfam_dead_other"/>
                                                     <field name="antfam_other_disease"/>
@@ -237,11 +241,101 @@
                                             <field name="antpsycho_school"/>
                                             </group>
                                         </fieldset>
-                                        </page>         
+                                        </page>
+                                        <page string="Surgical background">
+                                         <fieldset class="fieldset_margen">
+                                          <legend class="texto_legend">Surgical background</legend>
+                                          <group col="4">
+                                            <field name="antsurgical_reflux"/>
+                                            <field name="antsurgical_reflux_treatment"/>
+                                            <field name="antsurgical_thyroid"/>
+                                            <field name="antsurgical_thyroid_treatment"/>
+                                            <field name="antsurgical_constipation"/>
+                                            <field name="antsurgical_constipation_treatment"/>
+                                            <field name="antsurgical_diarrhea"/>
+                                            <field name="antsurgical_diarrhea_treatment"/>
+                                            <field name="antsurgical_pneumonia"/>
+                                            <field name="antsurgical_pneumonia_treatment"/>
+                                            <field name="antsurgical_bronchiolitis"/>
+                                            <field name="antsurgical_bronchiolitis_treatment"/>
+                                            <field name="antsurgical_croup"/>
+                                            <field name="antsurgical_croup_treatment"/>
+                                            <field name="antsurgical_urinary_infection"/>
+                                            <field name="antsurgical_urinary_infection_treatment"/>
+                                            <field name="antsurgical_varicella"/>
+                                            <field name="antsurgical_varicella_treatment"/>
+                                            <field name="antsurgical_scarlet_fever"/>
+                                            <field name="antsurgical_scarlet_fever_treatment"/>
+                                            <field name="antsurgical_allergy"/>
+                                            <field name="antsurgical_allergy_treatment"/>
+                                            <field name="antsurgical_headache"/>
+                                            <field name="antsurgical_headache_treatment"/>
+                                            <field name="antsurgical_fractures"/>
+                                            <field name="antsurgical_fractures_treatment"/>
+                                            <field name="antsurgical_accidents"/>
+                                            <field name="antsurgical_accidents_treatment"/>
+                                            <field name="antsurgical_anxiety"/>
+                                            <field name="antsurgical_anxiety_treatment"/>
+                                            <field name="antsurgical_seizures"/>
+                                            <field name="antsurgical_seizures_treatment"/>
+                                            <field name="antsurgical_cancer_tumors"/>
+                                            <field name="antsurgical_cancer_tumors_treatment"/>
+                                            <field name="antsurgical_transfusions"/>
+                                            <field name="antsurgical_transfusions_treatment"/>
+                                            <field name="antsurgical_hospitalizations"/>
+                                            <field name="antsurgical_surgeries"/>
+                                            <field name="antsurgical_others"/>
+                                          </group>
+                                        </fieldset>  
+                                        </page>
+                                        <page string="Neuropsychological background">
+                                         <fieldset class="fieldset_margen">
+                                          <legend class="texto_legend">Neuropsychological background</legend>
+                                          <group col="4">
+                                            <field name="antneuro_conduct_home"/>
+                                            <field name="antneuro_conduct_home_when"/>
+                                            <field name="antneuro_conduct_school"/>
+                                            <field name="antneuro_conduct_school_when"/>
+                                            <field name="antneuro_school_exploitation"/>
+                                            <field name="antneuro_school_exploitation_when"/>
+                                            <field name="antneuro_sight"/>
+                                            <field name="antneuro_sight_when"/>
+                                            <field name="antneuro_audition"/>
+                                            <field name="antneuro_audition_when"/>
+                                            <field name="antneuro_loses_balance"/>
+                                            <field name="antneuro_loses_balance_when"/>
+                                            <field name="antneuro_difficulty_speaking"/>
+                                            <field name="antneuro_difficulty_speaking_when"/>
+                                            <field name="antneuro_difficulty_sleep"/>
+                                            <field name="antneuro_difficulty_sleep_when"/>
+                                            <field name="antneuro_wakeup_night"/>
+                                            <field name="antneuro_wakeup_night_when"/>
+                                            <field name="antneuro_has_fainted"/>
+                                            <field name="antneuro_has_fainted_when"/>
+                                          </group>
+                                        </fieldset>
+                                        </page>
+                                       <page string="Nutritional Background">
+                                         <fieldset class="fieldset_margen">
+                                          <legend class="texto_legend">Nutritional Background</legend>
+                                          <group col="4">
+                                            <field name="antnutri_weight"/>
+                                            <field name="antnutri_size"/>
+                                            <field name="antnutri_percentile"/>
+                                            <field name="antnutri_bmi"/>
+                                            <field name="antnutri_solid_food"/>
+                                            <field name="antnutri_food_type"/>
+                                            <field name="antnutri_food_quality"/>
+                                            <field name="antnutri_food_quantity"/>
+                                            <field name="antnutri_special_diet"/>
+                                            <field name="antnutri_special_diet_which"/>
+                                        </group>
+                                        </fieldset>
+                                        </page>      
                                 </notebook>
                             </page>
 
-                            <page string="Examen Físico" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
+                            <page string="Exam" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
                                 <notebook colspan="4" col='4'>
                                     <page string="Vital signs">
                                         <group colspan='4' col='3'>
@@ -287,6 +381,16 @@
                                                 </group>
                                             </form>
                                         </field>
+                                    </page>
+                                    <page string="Functional assessment">
+                                         <fieldset class="fieldset_margen">
+                                          <legend class="texto_legend">Functional assessment</legend>
+                                          <group col="4">
+                                            <field name="functional_special_support"/>
+                                            <field name="functional_what_support"/>
+                                            <field name="functional_other_support"/>
+                                        </group>
+                                        </fieldset>
                                     </page>
                                 </notebook>
                             </page>
