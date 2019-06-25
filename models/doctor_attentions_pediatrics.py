@@ -309,9 +309,9 @@ class doctor_attentions_pediatrics(osv.Model):
         'antsurgical_cancer_tumors_treatment' : fields.char('Treatment / Date'),
         'antsurgical_transfusions'  : fields.boolean('Transfusions'),
         'antsurgical_transfusions_treatment' : fields.char('Treatment / Date'),
-        'antsurgical_hospitalizations'  : fields.char('Previous Hospitalizations'),
-        'antsurgical_surgeries' : fields.char('Surgeries'),
-        'antsurgical_others'    : fields.char('Others'),
+        'antsurgical_hospitalizations'  : fields.text('Previous Hospitalizations'),
+        'antsurgical_surgeries' : fields.text('Surgeries'),
+        'antsurgical_others'    : fields.text('Others'),
 
         #Neuropsychological background
         'antneuro_conduct_home' : fields.selection([('good', 'Good'), ('regular', 'Regular'), ('bad', 'Bad'), ], 'Conduct at Home'),

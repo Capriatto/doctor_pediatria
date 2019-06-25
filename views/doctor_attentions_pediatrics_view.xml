@@ -247,6 +247,8 @@
                                         <page string="Surgical background">
                                          <fieldset class="fieldset_margen">
                                           <legend class="texto_legend">Surgical background</legend>
+                                        <group col="2">
+                                        <fieldset class="fieldset_margen">
                                           <group col="4">
                                             <field name="antsurgical_reflux"/>
                                             <field name="antsurgical_reflux_treatment"/>
@@ -268,6 +270,10 @@
                                             <field name="antsurgical_varicella_treatment"/>
                                             <field name="antsurgical_scarlet_fever"/>
                                             <field name="antsurgical_scarlet_fever_treatment"/>
+                                            </group>
+                                            </fieldset>
+                                            <fieldset class="fieldset_margen">
+                                            <group col="4">
                                             <field name="antsurgical_allergy"/>
                                             <field name="antsurgical_allergy_treatment"/>
                                             <field name="antsurgical_headache"/>
@@ -284,10 +290,16 @@
                                             <field name="antsurgical_cancer_tumors_treatment"/>
                                             <field name="antsurgical_transfusions"/>
                                             <field name="antsurgical_transfusions_treatment"/>
+                                          </group>
+                                          </fieldset>
+                                        </group>
+                                        <fieldset class="fieldset_margen">
+                                        <group>
                                             <field name="antsurgical_hospitalizations"/>
                                             <field name="antsurgical_surgeries"/>
                                             <field name="antsurgical_others"/>
-                                          </group>
+                                        </group>
+                                        </fieldset>
                                         </fieldset>  
                                         </page>
                                         <page string="Neuropsychological background">
