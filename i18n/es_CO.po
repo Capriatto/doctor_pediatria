@@ -507,4 +507,103 @@ msgstr "¿Cuáles?"
 msgid "Did you use vitamins?"
 msgstr "¿Tomó vitaminas?"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antperin_used_vitamins:0
+msgid "Did you use vitamins?"
+msgstr "¿Tomó vitaminas?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_tuberculosis:0
+msgid "Tuberculosis"
+msgstr "Tuberculosis"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_polio:0
+msgid "Polio"
+msgstr "Polio"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_polio_quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_pentavalent:0
+msgid "Pentavalent (DPT,Hb,Hib)"
+msgstr "Pentavalente (DPT, Hb, Hib)"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_pentavalent_quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_triple_viral:0
+msgid "Triple Viral (Measles,Rubella,Mumps)"
+msgstr "Triple Viral (sarampión, rubeola, paperas)"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_triple_viral_quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_varicella:0
+msgid "Varicella"
+msgstr "Varicela"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_varicella_date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_pneumococcus:0
+msgid "Pneumococcus"
+msgstr "Neumococo"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_pneumococcus_date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_hepatitis_a:0
+msgid "Hepatitis A"
+msgstr "Hepatitis A"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_hepatitis_date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_influenza:0
+msgid "Influenza"
+msgstr "Influenza"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_influenza_date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_rotavirus:0
+msgid "Rotavirus"
+msgstr "Rotavirus"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_rotavirus_date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_other:0
+msgid "Other"
+msgstr "Otro"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antimm_other_which:0
+msgid "Specify"
+msgstr "Especifique"
 

@@ -260,7 +260,7 @@ class doctor_attentions_pediatrics(osv.Model):
         'antimm_rotavirus' : fields.boolean("Rotavirus"),
         'antimm_rotavirus_date' : fields.date('Date'),
         'antimm_other' : fields.char("Other"),
-        'antimm_other_date' : fields.date('Date'),
+        'antimm_other_which' : fields.char('Specify'),
  
         #psychomotor development
         'antpsicho_held_head' : fields.char('Did he/she hold the head?'),

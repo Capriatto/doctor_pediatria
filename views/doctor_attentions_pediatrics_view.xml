@@ -224,7 +224,7 @@
                                             <field name="antimm_rotavirus"/>
                                             <field name="antimm_rotavirus_date"/>
                                             <field name="antimm_other"/>
-                                            <field name="antimm_other_date"/>
+                                            <field name="antimm_other_which"/>
                                         </group>
                                         </fieldset>
                                         </page>
