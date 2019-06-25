@@ -338,7 +338,7 @@ class doctor_attentions_pediatrics(osv.Model):
         #functional assessment
         'functional_special_support' :  fields.boolean('Does your kid need special treatment?'),
         'functional_what_support' :     fields.selection([('none', 'None'), ('auditive', 'Auditive'), ('motor', 'Motor'), ('visual', 'Visual'), ('language', 'Language'), ], 'What kind of support does he/she need?'),
-        'functional_other_support' :    fields.char('Others'),
+        'functional_other_support' :    fields.text('Others'),
 
         #nutritional background
         'antnutri_weight' : fields.float('Weight'),

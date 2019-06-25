@@ -852,12 +852,229 @@ msgstr "Cirugías"
 msgid "Others"
 msgstr "Otros"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_conduct_home:0
+msgid "Conduct at Home"
+msgstr "Su conducta en casa es"
 
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_conduct_home:0
+msgid "Good"
+msgstr "Bien"
 
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_conduct_home:0
+msgid "Regular"
+msgstr "Regular"
 
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_conduct_home:0
+msgid "Bad"
+msgstr "Mal"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_conduct_home_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
 
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_conduct_school:0
+msgid "Conduct at School"
+msgstr "Su conducta en escuela es"
 
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_conduct_school:0
+msgid "Good"
+msgstr "Bien"
 
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_conduct_school:0
+msgid "Regular"
+msgstr "Regular"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_conduct_school:0
+msgid "Bad"
+msgstr "Mal"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_conduct_school_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_school_exploitation:0
+msgid "School Exploitation"
+msgstr "Su aprovechamiento es"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_school_exploitation:0
+msgid "Good"
+msgstr "Bien"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_school_exploitation:0
+msgid "Regular"
+msgstr "Regular"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_school_exploitation:0
+msgid "Bad"
+msgstr "Mal"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_school_exploitation_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_sight:0
+msgid "How does he/she see?"
+msgstr "¿Cómo ve?"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_sight:0
+msgid "Good"
+msgstr "Bien"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_sight:0
+msgid "Regular"
+msgstr "Regular"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_sight:0
+msgid "Bad"
+msgstr "Mal"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_sight_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_audition:0
+msgid "How does he/she hear?"
+msgstr "¿Cómo oye?"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_audition:0
+msgid "Good"
+msgstr "Bien"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_audition:0
+msgid "Regular"
+msgstr "Regular"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,antneuro_audition:0
+msgid "Bad"
+msgstr "Mal"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_audition_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_loses_balance:0
+msgid "Loses the balance easily"
+msgstr "Pierde el equilibrio con facilidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_loses_balance_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_difficulty_speaking:0
+msgid "Difficulty Speaking"
+msgstr "Dificultad para hablar"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_difficulty_speaking_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_difficulty_sleep:0
+msgid "Difficulty getting to sleep"
+msgstr "Dificultad para conciliar el sueño"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_difficulty_sleep_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_wakeup_night:0
+msgid "Does he/she wake up during the night"
+msgstr "Despierta durante la noche"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_wakeup_night_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_has_fainted:0
+msgid "Has he/she ever fainted"
+msgstr "Se ha desmayado alguna vez"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antneuro_has_fainted_when:0
+msgid "Since When?"
+msgstr "¿Desde Cuándo?"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_weight:0
+msgid "Weight"
+msgstr "Peso"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_size:0
+msgid "Size"
+msgstr "Estatura"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_percentile:0
+msgid "Percentile"
+msgstr "Percentil"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_bmi:0
+msgid "Body mass index"
+msgstr "Índice de Masa Corporal"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_solid_food:0
+msgid "Start solid food (age)"
+msgstr "Inicio de comida sólida (edad)"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_food_type:0
+msgid "Type of family meal (vegetarian, mixed, kosher)"
+msgstr "Tipo de comida familiar (vegetariana, mixta, kosher)"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_food_quality:0
+msgid "Food quality"
+msgstr "Alimentación calidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_food_quantity:0
+msgid "Food quantity"
+msgstr "Alimentación cantidad"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_special_diet:0
+msgid "Special Diet"
+msgstr "Dieta especial"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,antnutri_special_diet_which:0
+msgid "Which?"
+msgstr "¿Cuál?"
 
 
