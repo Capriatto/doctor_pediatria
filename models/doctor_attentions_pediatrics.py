@@ -132,31 +132,17 @@ class doctor_attentions_pediatrics(osv.Model):
         'conduct': fields.text('Conduct', required=False, states={'closed': [('readonly', True)]}),
         'diseases_ids': fields.one2many('doctor.attentions.diseases', 'attentiont_id', 'Diseases', ondelete='restrict',
                                         states={'closed': [('readonly', True)]}),
-        'drugs_ids': fields.one2many('doctor.prescription', 'attentiont_id', 'Drugs prescription', ondelete='restrict',
-                                     states={'closed': [('readonly', True)]}),
-        'diagnostic_images_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id', 'Diagnostic Images',
-                                                 ondelete='restrict', states={'closed': [('readonly', True)]},
-                                                 domain=[('procedures_id.procedure_type', '=', 3)]),
-        'clinical_laboratory_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id',
-                                                   'Clinical Laboratory', ondelete='restrict',
-                                                   states={'closed': [('readonly', True)]},
-                                                   domain=[('procedures_id.procedure_type', '=', 4)]),
-        'surgical_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id', 'Surgical Procedure',
-                                                  ondelete='restrict', states={'closed': [('readonly', True)]},
-                                                  domain=[('procedures_id.procedure_type', '=', 2)]),
         'therapeutic_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id',
                                                      'Therapeutic Procedure', ondelete='restrict',
                                                      states={'closed': [('readonly', True)]},
                                                      domain=[('procedures_id.procedure_type', '=', 5)]),
+        'therapeutic_results' :  fields.text('Therapeutic Results', required=False, states={'closed': [('readonly', True)]}),
         'other_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id', 'Other Procedure',
                                                ondelete='restrict', states={'closed': [('readonly', True)]},
                                                domain=['|', ('procedures_id.procedure_type', '=', 1), '|',
                                                        ('procedures_id.procedure_type', '=', 6),
                                                        ('procedures_id.procedure_type', '=', 7)]),
-        'referral_ids': fields.one2many('doctor.attentions.referral', 'attentiont_id', 'Referral', ondelete='restrict',
-                                        states={'closed': [('readonly', True)]}),
-        'disability_ids': fields.one2many('doctor.attentions.disability', 'attentiont_id', 'Disability',
-                                          ondelete='restrict', states={'closed': [('readonly', True)]}),
+        'exams' : fields.text('Exams', required=False, states={'closed': [('readonly', True)]}),
         'state': fields.selection([('open', 'Open'), ('closed', 'Closed')], 'Status', readonly=True, required=True),
         'tipo_historia': fields.char('tipo_historia', required=True),
 
@@ -533,7 +519,8 @@ class doctor_attentions_pediatrics(osv.Model):
         'antneuro_school_exploitation' : 'good',
         'antneuro_sight' : 'good',
         'antneuro_audition' : 'good',
-        'antperin_normal_birth' : True
+        'antperin_normal_birth' : True,
+        'patient_birth_date': lambda self, cr, uid, context: context.get('defaut_patient_birth_date', False)
     }
 
 

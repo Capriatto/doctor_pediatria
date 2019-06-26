@@ -84,14 +84,20 @@ class doctor_patient(osv.osv):
 			professional_id= self.pool.get('doctor.professional').browse(cr, uid, self.pool.get('doctor.professional').search(cr, uid, [( 'user_id',  '=', uid)]))[0].id	
 		except Exception as e:
 			professional_id= None
-			_logger.info("Error en doctor_patient_psicologia ===>  %s", e)
+			_logger.info("Error en doctor_patient_pediatrics ===>  %s", e)
 			
+
 		for paciente in self.browse(cr,uid,ids):
+			
 			paciente_id = paciente.id
 			context['default_patient_id'] = paciente_id
 			context['default_professional_id'] = professional_id
+			context['defaut_patient_birth_date']= paciente.birth_date
+			context['default_patient_sex'] = paciente.sex
 			context['default_age_attention'] = self.calcular_edad(paciente.birth_date)
 			context['default_age_unit'] = self.calcular_age_unit(paciente.birth_date)
+			context['default_patient_educational_level'] = paciente.nivel_educativo
+			context['default_patient_beliefs'] = paciente.creencias
 
 			return {
 				'type': 'ir.actions.act_window',

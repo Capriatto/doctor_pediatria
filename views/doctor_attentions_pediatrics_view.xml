@@ -396,29 +396,34 @@
                                             </form>
                                         </field>
                                     </page>
-                                    <page string="Functional assessment">
-                                         <fieldset class="fieldset_margen">
-                                          <legend class="texto_legend">Functional assessment</legend>
-                                          <group>
+                                </notebook>
+                            </page>
+                            <page string="Functional assessment">
+                                <fieldset class="fieldset_margen">
+                                    <legend class="texto_legend">Functional assessment</legend>
+                                        <group>
                                             <field name="functional_special_support" on_change="onchange_kindsupport(functional_special_support)"/>
                                             <field name="functional_what_support" attrs="{'invisible':[('functional_special_support','=', False)]}" />
                                             <field name="functional_other_support"/>
                                         </group>
                                         </fieldset>
                                     </page>
-                                </notebook>
+                            <page string="Exams" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
+                                    <fieldset class="fieldset_margen">
+                                    <legend class="texto_legend">Lab Exams, Cabinet, and Others</legend>
+                                        <field name="exams" nolabel="1" placeholder="Previous and current exams"/>
+                                    </fieldset>
                             </page>
                             <page string="Dx, Análisis y Conducta">
                                 <group colspan='4' col='4'>
 
                                         <group colspan="2" col='1' groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                            <field name='analysis'/>
+                                            <field name='analysis' placeholder="Medical Analysis"/>
                                         </group>
 
                                     <group colspan="2" col='1' groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config" id="group_conduct">
-                                        <label for="conduct" string="Conduct"/>
-                                        <label for="conduct" string="Conducta(Plan de manejo)" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config"/>
-                                        <field name='conduct' nolabel="1" placeholder="Conduct" />
+                                        <label for="conduct" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config"/>
+                                        <field name='conduct' nolabel="1" placeholder="Patient Conduct" />
                                     </group>
 
                                 </group>
@@ -426,7 +431,7 @@
                                 <group colspan='4' col='4'>
 
                                     <notebook colspan="4" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                        <page string="Diseases" >
+                                        <page string="Diagnosis" >
                                             <field name="diseases_ids" colspan="4" nolabel="1">
                                                 <tree string="Diseases" editable="bottom">
                                                     <field name="diseases_id" />
@@ -442,120 +447,8 @@
                                                 </form>
                                             </field>
                                         </page>
-                                        <page string="Drugs prescription" >
-                                            <field name="drugs_ids" colspan="4" nolabel="1" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                                <tree string="Drugs prescription">
-                                                    <field name="drugs_id"/>
-                                                    <field name="total_quantity"/>
-                                                    <field name="measuring_unit_qt" string="Measuring unit"/>
-                                                    <field name="administration_route_id" string="Route"/>
-                                                </tree>
-                                                <form string="Drugs prescription">
-                                                    <group>
-                                                        <group>
-                                                            <group colspan='3' col='2'>
-                                                                <field name="drugs_id" />
-                                                            </group>
-                                                            <group colspan='3' col='3'>
-                                                                <div>
-                                                                    <label for="total_quantity" string="Total quantity"/>
-                                                                    <field name="total_quantity" style="width:15%%"/>
-                                                                    <field name="measuring_unit_qt" nolabel='1' style="width:30%%"/>
-                                                                </div>
-                                                            </group>
-                                                        </group>
-                                                        <separator string="Normal prescription" colspan="4"/>
-                                                        <group >
-                                                            <group colspan='3' col='3'>
-                                                                <div>
-                                                                    <field name="action_id" nolabel='1' style="width:25%%"/>
-                                                                    <field name="quantity" nolabel='1' style="width:15%%"/>
-                                                                    <field name="measuring_unit_q" nolabel='1' style="width:25%%"/>
-                                                                </div>
-                                                            </group>
-                                                            <group colspan='3' col='6'>
-                                                                <div>
-                                                                    <label for="frequency" string="Each"/>
-                                                                    <field name="frequency" string="Each" style="width:15%%"/>
-                                                                    <field name="frequency_unit_n" nolabel='1' style="width:15%%"/>
-                                                                    <label for="duration" string="During"/>
-                                                                    <field name="duration" string="During" style="width:15%%"/>
-                                                                    <field name="duration_period_n" nolabel='1' style="width:15%%"/>
-                                                                </div>
-                                                            </group>
-                                                            <group>
-                                                                <div>
-                                                                    <label for="administration_route_id" string="Route"/>
-                                                                    <field name="administration_route_id" string="Route" style="width:35%%"/>
-                                                                </div>
-                                                            </group>
-                                                        </group>
-                                                        <separator string="Technical prescription" colspan="4"/>
-                                                        <group>
-                                                            <group colspan='3' col='3'>
-                                                                <div>
-                                                                    <label for="dose" string="Dose"/>
-                                                                    <field name="dose" style="width:15%%"/>
-                                                                    <field name="dose_unit_id" nolabel='1' style="width:25%%"/>
-                                                                </div>
-                                                            </group>
-                                                            <group>
-                                                                <field name="indications"/>
-                                                            </group>
-                                                        </group>
-                                                    </group>
-                                                </form>
-                                            </field>
-                                        </page>
-                                        <page string="Diagnostic support" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                            <separator string="Ayudas Diagnósticas" colspan="4"/>
-                                            <field name="diagnostic_images_ids" colspan="4" nolabel="1">
-                                                <tree string="Diagnostic images" editable="bottom">
-                                                    <field name="procedures_id" domain="['|',('procedure_type', '=', 3),('procedure_type', '=',8)]" context="{'diagnostic_images':'1'}"/>
-                                                    <field name="quantity"/>
-                                                    <field name="indications"/>
-                                                </tree>
-                                                <form string="Diagnostic images">
-                                                    <group>
-                                                        <field name="procedures_id" domain="['|',('procedure_type', '=', 3),('procedure_type', '=',8)]" context="{'diagnostic_images':'1'}"/>
-                                                        <field name="quantity"/>
-                                                        <field name="indications"/>
-                                                    </group>
-                                                </form>
-                                            </field>
-                                            <separator string="Clinical laboratory" colspan="4"/>
-                                            <field name="clinical_laboratory_ids" colspan="4" nolabel="1">
-                                                <tree string="Clinical laboratory" editable="bottom">
-                                                    <field name="procedures_id" domain="[('procedure_type', '=', 4)]" context="{'clinical_laboratory':'1'}"/>
-                                                    <field name="quantity"/>
-                                                    <field name="indications"/>
-                                                </tree>
-                                                <form string="Clinical laboratory">
-                                                    <group>
-                                                        <field name="procedures_id" domain="[('procedure_type', '=', 4)]" context="{'clinical_laboratory':'1'}"/>
-                                                        <field name="quantity"/>
-                                                        <field name="indications"/>
-                                                    </group>
-                                                </form>
-                                            </field>
-                                        </page>
-                                        <page string="Procedimientos" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                            <separator string="Procedimientos Quirúrgicos" colspan="4"/>
-                                            <field name="surgical_procedure_ids" colspan="4" nolabel="1">
-                                                <tree string="Surgical procedure" editable="bottom">
-                                                    <field name="procedures_id" domain="[('procedure_type', '=', 2)]"/>
-                                                    <field name="quantity"/>
-                                                    <field name="indications"/>
-                                                </tree>
-                                                <form string="Surgical procedure">
-                                                    <group>
-                                                        <field name="procedures_id" domain="[('procedure_type', '=', 2)]"/>
-                                                        <field name="quantity"/>
-                                                        <field name="indications"/>
-                                                    </group>
-                                                </form>
-                                            </field>
-                                             <separator string="Procedimientos Terapéuticos" colspan="4"/>
+                                        <page string="Therapeutic Procedures" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
+                                             <separator string="Therapeutic Procedures" colspan="4"/>
                                             <field name="therapeutic_procedure_ids" colspan="4" nolabel="1">
                                                 <tree string="Therapeutic procedure" editable="bottom">
                                                     <field name="procedures_id" domain="[('procedure_type', '=', 5)]"/>
@@ -570,34 +463,16 @@
                                                     </group>
                                                 </form>
                                             </field>
-                                        </page>
-                                        <page string="Others" groups="doctor_pediatrics.group_doctor_pediatrics,doctor_pediatrics.group_doctor_pediatrics_config">
-                                            <separator string="Referral and interconsultation" colspan="4"/>
-                                            <field name="referral_ids" colspan="4" nolabel="1">
-                                                <tree string="Referral" >
-                                                    <field name="referral_ids"/>
-                                                    <field name="speciality_id"/>
-                                                    <field name="interconsultation" />
-                                                    <field name="cause"/>
-                                                </tree>
-                                                <form string="Referral">
-                                                    <group>
-                                                        <field name="referral_ids"/>
-                                                        <field name="speciality_id"/>
-                                                        <field name="interconsultation" />
-                                                        <field name="cause"/>
-                                                    </group>
-                                                </form>
-                                            </field>
-                                            <separator string="Disability" colspan="4"/>
-                                            <field name="disability_ids" colspan="4" nolabel="1"/>
+                                            <fieldset class="fieldset_margen">
+                                            <legend class="texto_legend">Therapeutical Results</legend>
+                                            <group>
+                                               <field name="therapeutic_results" nolabel="1"/>
+                                            </group>
+                                            </fieldset>
                                         </page>
                                     </notebook>
                                 </group>
                             </page>
-
-
-
                         </notebook>
                 </group>
             </form>

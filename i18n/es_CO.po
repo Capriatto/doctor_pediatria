@@ -16,6 +16,16 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,patient_sex:0
+msgid "Male"
+msgstr "Masculino"
+
+#. module: doctor_pediatrics
+#: selection:doctor.attentions.pediatrics,patient_sex:0
+msgid "Female"
+msgstr "Femenino"
+
+#. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,state:0
 msgid "Open"
 msgstr "Abierta"
@@ -51,6 +61,27 @@ msgid "Unit of measure of age"
 msgstr "Unidad"
 
 #. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,conduct:0
+#: view:doctor.attentions.pediatrics:0
+msgid "Conduct"
+msgstr "Conducta"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Diagnosis"
+msgstr "Diagnósticos"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Patient Conduct"
+msgstr "Conducta del Paciente"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Medical Analysis"
+msgstr "Comentarios del Médico Tratante"
+
+#. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,age_attention:0
 msgid "Current age"
 msgstr "Edad"
@@ -61,9 +92,36 @@ msgid "Speciality"
 msgstr "Especialidad"
 
 #. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,therapeutic_results:0
+#: view:doctor.attentions.pediatrics:0
+msgid "Therapeutical Results"
+msgstr "Resultados Terapéuticos"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Therapeutic Procedures"
+msgstr "Procedimientos Terapéuticos"
+
+#. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,actual_disease:0
 msgid "Actual Disease"
 msgstr "Padecimiento Actual"
+
+#. module: doctor_pediatrics
+#: field:doctor.attentions.pediatrics,exams:0
+#: view:doctor.attentions.pediatrics:0
+msgid "Exams"
+msgstr "Exámenes"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Lab Exams, Cabinet, and Others"
+msgstr "Exám. de Laboratorio, Gabinete y Otros"
+
+#. module: doctor_pediatrics
+#: view:doctor.attentions.pediatrics:0
+msgid "Previous and current exams"
+msgstr "Exámenes previos y actuales"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,patient_birth_date:0
