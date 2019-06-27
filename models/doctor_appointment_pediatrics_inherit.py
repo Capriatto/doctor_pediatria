@@ -191,6 +191,27 @@ class doctor_appointment(osv.osv):
 					'nodestroy': True,
 				}
 
+		if self.pool.get('doctor.doctor').modulo_instalado(cr, uid, 'doctor_gynecology', context=context):
+			
+			if tipo_historia == u'doctor_gynecology':
+				context['default_patient_id'] = context.get('patient_id')
+				context['default_professional_id'] = profesional_id
+				context['tipo_cita_id'] = tipo_cita
+				attentiont_id = self.create_attentiont_gynecology(cr, uid, doctor_appointment_variable, self.pool.get('doctor.attentions.gynecology'), context=context)
+				result = data_obj._get_id(cr, uid, 'doctor_gynecology','view_doctor_attentions_gynecology_form')
+				view_id = data_obj.browse(cr, uid, result).res_id
+				return {
+					'type': 'ir.actions.act_window',
+					'view_type': 'form',
+					'view_mode': 'form',
+					'res_model': 'doctor.attentions.gynecology',
+					'res_id': attentiont_id or False,
+					'view_id': [view_id] or False,
+					'type': 'ir.actions.act_window',
+					'context' : context or None,
+					'nodestroy': True,
+				}
+
 		if tipo_historia == "doctor" or tipo_historia == "l10n_co_doctor":
 			# Get view to show
 			result = data_obj._get_id(cr, uid, 'doctor', 'view_doctor_attentions_form')
