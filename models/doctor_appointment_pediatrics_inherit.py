@@ -172,6 +172,7 @@ class doctor_appointment(osv.osv):
 
 		if self.pool.get('doctor.doctor').modulo_instalado(cr, uid, 'doctor_pediatrics', context=context):
 			
+			if tipo_historia == u'doctor_pediatrics':
 				context['default_patient_id'] = context.get('patient_id')
 				context['default_professional_id'] = profesional_id
 				context['tipo_cita_id'] = tipo_cita
