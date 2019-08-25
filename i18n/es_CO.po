@@ -918,7 +918,7 @@ msgstr "Su conducta en casa es"
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_conduct_home:0
 msgid "Good"
-msgstr "Bien"
+msgstr "Buena"
 
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_conduct_home:0
@@ -928,7 +928,7 @@ msgstr "Regular"
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_conduct_home:0
 msgid "Bad"
-msgstr "Mal"
+msgstr "Mala"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,antneuro_conduct_home_when:0
@@ -943,7 +943,7 @@ msgstr "Su conducta en escuela es"
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_conduct_school:0
 msgid "Good"
-msgstr "Bien"
+msgstr "Buena"
 
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_conduct_school:0
@@ -953,7 +953,7 @@ msgstr "Regular"
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_conduct_school:0
 msgid "Bad"
-msgstr "Mal"
+msgstr "Mala"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,antneuro_conduct_school_when:0
@@ -968,7 +968,7 @@ msgstr "Su aprovechamiento es"
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_school_exploitation:0
 msgid "Good"
-msgstr "Bien"
+msgstr "Bueno"
 
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_school_exploitation:0
@@ -978,7 +978,7 @@ msgstr "Regular"
 #. module: doctor_pediatrics
 #: selection:doctor.attentions.pediatrics,antneuro_school_exploitation:0
 msgid "Bad"
-msgstr "Mal"
+msgstr "Malo"
 
 #. module: doctor_pediatrics
 #: field:doctor.attentions.pediatrics,antneuro_school_exploitation_when:0
