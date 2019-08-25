@@ -59,10 +59,6 @@ class doctor_attentions_pediatrics(osv.Model):
             condition.append(('attentiont_id', '<=', attentiont_id))
         if type_past == 'past':
             return self.pool.get('doctor.attentions.past').search(cr, uid, condition, order='id desc')
-        if type_past == 'pathological':
-            return self.pool.get('doctor.diseases.past').search(cr, uid, condition, order='id desc')
-        if type_past == 'drugs':
-            return self.pool.get('doctor.atc.past').search(cr, uid, condition, order='id desc')
 
     def _get_past(self, cr, uid, ids, field_name, arg, context=None):
         res = {}
@@ -105,19 +101,11 @@ class doctor_attentions_pediatrics(osv.Model):
         'reason_consultation' : fields.char("Reason of Consultation", size=100, required=False, states={'closed': [('readonly', True)]}),
         'review_systems_id': fields.one2many('doctor.review.systems', 'attentiont_pediatrics_id', 'Review of systems',
                                              ondelete='restrict', states={'closed': [('readonly', True)]}),
-        'attentions_past_ids': fields.one2many('doctor.attentions.past', 'attentiont_id', 'Past', ondelete='restrict',
+        'attentions_past_ids': fields.one2many('doctor.attentions.past', 'attentiont_pediatrics_id', 'Past', ondelete='restrict',
                                                states={'closed': [('readonly', True)]}),
         'past_ids': fields.function(_get_past, relation="doctor.attentions.past", type="one2many", store=False,
                                     readonly=True, method=True, string="Old Past"),
-        'pathological_past': fields.one2many('doctor.diseases.past', 'attentiont_id', 'Pathological past',
-                                             ondelete='restrict', states={'closed': [('readonly', True)]}),
-        'pathological_past_ids': fields.function(_get_pathological_past, relation="doctor.diseases.past",
-                                                 type="one2many", store=False, readonly=True, method=True,
-                                                 string="Old Pathological Past"),
-        'drugs_past': fields.one2many('doctor.atc.past', 'attentiont_id', 'Drugs past', ondelete='restrict',
-                                      states={'closed': [('readonly', True)]}),
-        'drugs_past_ids': fields.function(_get_drugs_past, relation="doctor.atc.past", type="one2many", store=False,
-                                          readonly=True, method=True, string="Old drugs Past"),
+        
         'body_mass_index': fields.float('Body Mass Index', states={'closed': [('readonly', True)]}),
         'heart_rate': fields.integer('Heart Rate', help="Heart rate expressed in beats per minute",
                                      states={'closed': [('readonly', True)]}),
@@ -130,14 +118,14 @@ class doctor_attentions_pediatrics(osv.Model):
                                                states={'closed': [('readonly', True)]}),
         'analysis': fields.text('Analysis', required=False, states={'closed': [('readonly', True)]}),
         'conduct': fields.text('Conduct', required=False, states={'closed': [('readonly', True)]}),
-        'diseases_ids': fields.one2many('doctor.attentions.diseases', 'attentiont_id', 'Diseases', ondelete='restrict',
+        'diseases_ids': fields.one2many('doctor.attentions.diseases', 'attentiont_pediatrics_id', 'Diseases', ondelete='restrict',
                                         states={'closed': [('readonly', True)]}),
-        'therapeutic_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id',
+        'therapeutic_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_pediatrics_id',
                                                      'Therapeutic Procedure', ondelete='restrict',
                                                      states={'closed': [('readonly', True)]},
                                                      domain=[('procedures_id.procedure_type', '=', 5)]),
         'therapeutic_results' :  fields.text('Therapeutic Results', required=False, states={'closed': [('readonly', True)]}),
-        'other_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_id', 'Other Procedure',
+        'other_procedure_ids': fields.one2many('doctor.attentions.procedures', 'attentiont_pediatrics_id', 'Other Procedure',
                                                ondelete='restrict', states={'closed': [('readonly', True)]},
                                                domain=['|', ('procedures_id.procedure_type', '=', 1), '|',
                                                        ('procedures_id.procedure_type', '=', 6),
@@ -393,17 +381,12 @@ class doctor_attentions_pediatrics(osv.Model):
             return values
         past = self.pool.get('doctor.attentions.past').search(cr, uid, [('patient_id', '=', patient_id)],
                                                               order='id asc')
-        phatological_past = self.pool.get('doctor.diseases.past').search(cr, uid, [('patient_id', '=', patient_id)],
-                                                                         order='id asc')
-        drugs_past = self.pool.get('doctor.atc.past').search(cr, uid, [('patient_id', '=', patient_id)], order='id asc')
         patient_data = self.pool.get('doctor.patient').browse(cr, uid, patient_id, context=context)
         photo_patient = patient_data.photo
 
         values.update({
             'patient_photo': photo_patient,
-            'past_ids': past,
-            'pathological_past_ids': phatological_past,
-            'drugs_past_ids': drugs_past,
+            'past_ids': past
         })
         return {'value': values}
 
