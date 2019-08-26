@@ -31,6 +31,7 @@
     """,
     'website': '',
     'data': [
+        'data/report_doctor_pediatrics.xml',
         'data/appointment_type.sql',
         'security/doctor_security.xml',
         'security/ir.model.access.csv',

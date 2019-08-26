@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+    <data>
+        <report id="doctor_pediatrics_report_id" model="doctor.attentions.pediatrics" name="doctor.pediatrics.report" rml="doctor_pediatrics/report/doctor_pediatrics_report.rml" string="HC Pediatría" auto="True" header="False"/>
+    </data>
+</openerp>
