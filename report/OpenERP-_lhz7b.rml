@@ -117,12 +117,12 @@
     <blockTableStyle id="Tabla7">
       <blockAlignment value="LEFT"/>
       <blockValign value="TOP"/>
-      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,0" stop="0,-1"/>
-      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="0,1" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,1" stop="0,1"/>
       <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
-      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,0" stop="1,-1"/>
-      <lineStyle kind="LINEAFTER" colorName="#000000" start="1,0" stop="1,-1"/>
-      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBEFORE" colorName="#000000" start="1,1" stop="1,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#000000" start="1,1" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,1" stop="1,1"/>
       <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
     </blockTableStyle>
     <blockTableStyle id="Tabla8">
@@ -1008,7 +1008,6 @@
     <paraStyle name="P17" fontName="Helvetica" alignment="CENTER"/>
     <paraStyle name="P18" fontName="Helvetica" fontSize="10.0" leading="13" alignment="CENTER"/>
     <paraStyle name="P19" fontName="Helvetica" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
-    <paraStyle name="P20" fontName="Helvetica" fontSize="10.0" leading="13" alignment="CENTER" spaceBefore="6.0" spaceAfter="6.0"/>
     <paraStyle name="Standard" fontName="Helvetica"/>
     <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
     <paraStyle name="Text_20_body" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
@@ -1174,22 +1173,22 @@
     <blockTable colWidths="249.0,249.0" style="Tabla7">
       <tr>
         <td>
-          <para style="P15"><font face="Helvetica" size="2.0">[[repeatIn(o.review_systems_id,'l')]]</font>[[ l.system_category.name ]]</para>
+          <para style="P15">
+            <font color="white"> </font>
+          </para>
         </td>
         <td>
-          <para style="P15">[[ l.review_systems or removeParentNode('tr') ]]</para>
+          <para style="P15">
+            <font color="white"> </font>
+          </para>
         </td>
       </tr>
       <tr>
         <td>
-          <para style="P15">
-            <font color="white"> </font>
-          </para>
+          <para style="P15"><font face="Helvetica" size="2.0">[[repeatIn(o.review_systems_id,'l')]]</font>[[ l.system_category.name ]]</para>
         </td>
         <td>
-          <para style="P15">
-            <font color="white"> </font>
-          </para>
+          <para style="P15">[[ l.review_systems or removeParentNode('tr') ]]</para>
         </td>
       </tr>
     </blockTable>
